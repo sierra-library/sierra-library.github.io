@@ -85,6 +85,33 @@ $table-bg-color:		#34495e;
 $table-header-bg-color:	$body-bg;
 $table-text-color:		$white;
 
+$textColourMap: (
+  primary:              $brand-primary,
+  secondary:            $brand-secondary,
+  dark:                 $text-dark,
+  grey:                 $text-grey,
+  green:                $color-success,
+  success:              $color-success,
+  red:                  $color-error,
+  error:                $color-error,
+  warning:              $color-warning
+);
+
+$backgroundColourMap: (
+  primary:              $brand-primary,
+  dark:                 $brand-dark,
+  secondary:            $brand-secondary,
+  white:                $white,
+  success:              $color-success,
+  info:                 $color-info,
+  warning:              $color-warning,
+  error:                $color-error,
+  grey:                 $background-grey,
+  grey-dark:            $grey-dark,
+  grey-soft:            $grey-soft,
+  grey-light:           $grey-light
+);
+
 
 // Links
 
@@ -125,6 +152,44 @@ $rating9: 		#43a047;
 $rating10: 		#388e3c;
 
 
+
+/**
+*  $BUTTONS
+*/
+
+$button-border-radius: .5; // 50% of the button's height
+$button-sizes: (
+  normal: (
+    fontSize: 12px,
+    lineHeight: 1.5,
+    paddingTB: 10px,
+    paddingLR: 20px
+  ),
+  big: (
+    fontSize: 16px,
+    lineHeight: 1.5,
+    paddingTB: 10px,
+    paddingLR: 30px
+  ),
+  small: (
+    fontSize: 11px,
+    lineHeight: 1.273,
+    paddingTB: 6px,
+    paddingLR: 20px
+  ),
+  huge: (
+    fontSize: 16px,
+    lineHeight: 1.5,
+    paddingTB: 15px,
+    paddingLR: 30px
+  ),
+  hugeLg: (
+    fontSize: 18px,
+    lineHeight: 1.5,
+    paddingTB: 18px,
+    paddingLR: 50px
+  )
+);
 
 
 /**

@@ -8,7 +8,7 @@
         <link rel="shortcut icon" href="dist/ico.ico">
 
         <!-- Sierra library CSS stylesheets -->
-        <link rel="stylesheet" href="dist/sierra.css">
+        <link rel="stylesheet" href="dist/sierra.min.css">
 
         <!-- DEMO CSS stylesheets -->
         <link rel="stylesheet" href="demo/css/prism.css">
@@ -40,32 +40,34 @@
                 </section>
                 <section class="section">
                     <h2 class="text-big">Estructure</h2>
-                    <pre><code class="language-css">  src/
-    ├── sierra.scss                        /* Import library modules from scss folder */
-    ├── styles.scss                        /* Import main library scss file and configuration variables */
-    ├── variables.scss                     /* Configure grid system, colors, font family, font size, borders... */
-    └── scss/
-          ├── background-colors.scss
-          ├── bootstrapgrid/               /* Bootstrap grid system */
-          │     ├── grid.scss
-          │     └── grid-frameworks.scss
-          ├── bootstrapgrid.scss           /* Bootstrap main grid file */
-          ├── buttons.scss
-          ├── flexboxgrid/                 /* Flexboxgrid system */
-          │      └── grid.scss
-          ├── flexboxgrid.scss             /* Flexfox main grid file */
-          ├── forms.scss
-          ├── helpers.scss                 /* Utilities and modifiers */
-          ├── layout.scss
-          ├── loading-bar.scss
-          ├── loading-spinner.scss
-          ├── main.scss
-          ├── mixins.scss
-          ├── placeholders.scss
-          ├── reset.scss
-          ├── tables.scss
-          ├── tabs.scss
-          └── tipography.scss </code></pre>
+                    <pre><code class="language-css">    src/
+     ├── entry.scss                         /* Import main library scss file and configuration variables */
+     ├── _sierra.scss                       /* Import library modules from scss folder */
+     ├── _variables.scss                    /* Configure grid system, colors, font family, font size, borders... */
+     └── scss/
+           ├── background-colors.scss
+           ├── bootstrapgrid/               /* Bootstrap grid system */
+           │     ├── grid.scss
+           │     └── grid-frameworks.scss
+           ├── bootstrapgrid.scss           /* Bootstrap main grid file */
+           ├── buttons.scss
+           ├── flexboxgrid/                 /* Flexboxgrid system */
+           │      └── grid.scss
+           ├── flexboxgrid.scss             /* Flexfox main grid file */
+           ├── utils/
+           │      └── mixins.scss
+           ├── vendor/
+           │      └── reset.scss
+           ├── forms.scss
+           ├── helpers.scss                 /* Utilities and modifiers */
+           ├── layout.scss
+           ├── loading-bar.scss
+           ├── loading-spinner.scss
+           ├── main.scss
+           ├── placeholders.scss
+           ├── tables.scss
+           ├── tabs.scss
+           └── typography.scss </code></pre>
                 </section>
 
                 <section class="section">
