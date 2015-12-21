@@ -6,3 +6,5 @@ node_modules/
 .composer.phar
 
 *.sublime-gulp.cache
+/gulpfile.js
+/package.json
