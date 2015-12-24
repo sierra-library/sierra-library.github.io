@@ -2,6 +2,18 @@
  * Demo website styles
  */
 
+
+// main logo
+.main-logo{
+
+  width: 250px;
+
+  @include breakpoint(bp-small, max-width) {
+    max-width: 200px;
+  }
+
+}
+
 // code
 pre[class*=language-]>code[data-language] {
   max-height: none !important;
