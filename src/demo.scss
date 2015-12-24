@@ -25,6 +25,6 @@ code[class*=language-], pre[class*=language-] {
   color:$text-grey!important;
 }
 
-.token.lf {
-  color:$text-grey!important;
+.token.lf::before {
+  display:none!important;
 }
