@@ -1,0 +1,12 @@
+/**
+ * Demo website styles
+ */
+
+// code
+pre[class*=language-]>code[data-language] {
+  max-height: auto;
+  overflow: auto;
+}
+pre[class*=language-]>code[data-language]::before {
+  display: none;
+}
