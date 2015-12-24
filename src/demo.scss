@@ -4,7 +4,7 @@
 
 // code
 pre[class*=language-]>code[data-language] {
-  max-height: auto !important;
+  max-height: none !important;
   overflow: auto !important;
 }
 pre[class*=language-]>code[data-language]::before {
