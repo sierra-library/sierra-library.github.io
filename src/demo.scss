@@ -7,6 +7,24 @@ pre[class*=language-]>code[data-language] {
   max-height: none !important;
   overflow: auto !important;
 }
+
 pre[class*=language-]>code[data-language]::before {
   display: none !important;
+}
+
+code[class*=language-], pre[class*=language-] {
+  color: $white!important;
+  text-shadow: none!important;
+}
+
+:not(pre)>code[class*=language-], pre[class*=language-] {
+  background-color: $brand-dark!important;
+}
+
+.token.boolean, .token.constant, .token.number, .token.property, .token.symbol, .token.tag {
+  color:$text-grey!important;
+}
+
+.token.lf {
+  display:none!important;
 }
