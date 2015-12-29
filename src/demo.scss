@@ -25,7 +25,7 @@ pre[class*=language-]>code[data-language]::before {
 }
 
 code[class*=language-], pre[class*=language-] {
-  color: $white!important;
+  color: $text-color!important;
   text-shadow: none!important;
 }
 
