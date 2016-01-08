@@ -34,7 +34,7 @@ code[class*=language-], pre[class*=language-] {
 }
 
 .token.boolean, .token.constant, .token.number, .token.property, .token.symbol, .token.tag {
-  color:$text-grey!important;
+  color:$text-gray!important;
 }
 
 .token.lf::before {
