@@ -1,8 +1,8 @@
 {
-  "name": "sierra-library",
-  "version": "1.1.7",
+  "name": "sierra-library-website",
+  "version": "2.0.0",
   "description": "The smallest and lightest scss library",
-  "main": "dist/sierra.min.css",
+  "main": "index.html",
   "repository": {
     "type": "git",
     "url": "https://github.com/sierra-library/sierra.git"
@@ -29,29 +29,19 @@
     }
   ],
   "scripts": {
-    "prestart": "npm install",
-    "start": "http-server -a 0.0.0.0 -p 8800"
+    "build": "npm run build:prod && npm run build:dev",
+    "build:dev": "node-sass --include-path node_modules src/index.scss css/styles.css && postcss --use autoprefixer css/styles.css -d css/",
+    "build:prod": "node-sass --include-path node_modules src/index.scss css/styles.min.css --output-style compressed && postcss --use autoprefixer css/styles.min.css -d css/",
+    "watch": "nodemon -e scss -x \"npm run build\""
   },
   "private": false,
+  "dependencies":{
+    "sierra-library": "2"
+  },
   "devDependencies": {
-    "autoprefixer": "^6.3.5",
-    "css-mqpacker": "^4.0.1",
-    "csscomb": "^3.1.8",
-    "cssnano": "^3.5.2",
-    "gulp": "^3.9.0",
-    "gulp-combine-mq": "^0.4.0",
-    "gulp-csscomb": "^3.0.6",
-    "gulp-csso": "^1.0.1",
-    "gulp-load-plugins": "^1.1.0",
-    "gulp-minify-css": "^1.2.2",
-    "gulp-notify": "^2.2.0",
-    "gulp-plumber": "^1.0.1",
-    "gulp-postcss": "^6.1.0",
-    "gulp-rename": "~1.2.2",
-    "gulp-sass": "^2.1.1",
-    "gulp-size": "^2.0.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-util": "^3.0.7",
-    "http-server": "^0.9.0"
+    "autoprefixer": "8",
+    "node-sass": "4",
+    "nodemon": "1",
+    "postcss-cli": "2"
   }
 }
