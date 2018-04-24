@@ -10,7 +10,7 @@
 
   width: 250px;
 
-  @include breakpoint(bp-small, max-width) {
+  @include media-breakpoint-down(sm) {
     max-width: 200px;
   }
 
