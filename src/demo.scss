@@ -2,7 +2,7 @@
  * Demo website styles
  */
 
-
+$codefont: 'Courier New', monospace;
 
 
 // main logo
@@ -10,10 +10,14 @@
 
   width: 250px;
 
-  @include breakpoint(bp-small, max-width) {
+  @include media-breakpoint-down(sm) {
     max-width: 200px;
   }
 
+}
+
+pre {
+  margin-bottom: 2em !important;
 }
 
 // code
@@ -27,16 +31,16 @@ pre[class*=language-]>code[data-language]::before {
 }
 
 code[class*=language-], pre[class*=language-] {
-  color: $text-color!important;
+  color: $c-text!important;
   text-shadow: none!important;
 }
 
 :not(pre)>code[class*=language-], pre[class*=language-] {
-  background-color: $brand-dark!important;
+  background-color: $c-dark!important;
 }
 
 .token.boolean, .token.constant, .token.number, .token.property, .token.symbol, .token.tag {
-  color:$text-gray!important;
+  color:$c-gray!important;
 }
 
 .token.lf::before {

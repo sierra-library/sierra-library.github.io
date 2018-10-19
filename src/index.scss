@@ -1,7 +1,11 @@
 @charset 'UTF-8';
 
+// Customize theme
+// @import 'custom';
+
 // Adding library
-@import 'sierra-library/src/sierra';
+@import 'sierra-library/lib/index';
+//@import '../../sierra/src/index';
 
 // Add demo files
 @import 'demo';
