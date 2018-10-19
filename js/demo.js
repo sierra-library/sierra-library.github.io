@@ -16,7 +16,7 @@ $(document).ready(function(){
         $(this).text(code);
     });
 
-    
+
     /**
      * loading bar
      **/
@@ -27,12 +27,12 @@ $(document).ready(function(){
     });
 
     function showHideLoadingBar(){
-        if ($('.loading-bar').length === 0) { 
-            $( 'body').append( "<div class='loading-bar'></div>" );
+        if ($('.loadingBar').length === 0) {
+            $( 'body').append( "<div class='loadingBar'></div>" );
         }
-        setTimeout(function(){ 
-            $('.loading-bar').fadeOut(function(){
-                $('.loading-bar').remove();
+        setTimeout(function(){
+            $('.loadingBar').fadeOut(function(){
+                $('.loadingBar').remove();
             });
         }, 3000);
     }
@@ -47,15 +47,15 @@ $(document).ready(function(){
       return false;
     });
     function showHideLoadingSpinner(){
-        if ($('.loading-spinner').length === 0) { 
-            $('body').append( "<div class='loading-spinner'><span></span><span></span><span></span><span></span></div>" );
+        if ($('.loadingSpinner').length === 0) {
+            $('body').append( "<div class='loadingSpinner'><span class=\"loadingSpinner-inner\"></span><span class=\"loadingSpinner-inner\"></span><span class=\"loadingSpinner-inner\"></span><span class=\"loadingSpinner-inner\"></span></div>" );
         }
-        setTimeout(function(){ 
-            $('.loading-spinner').fadeOut(
+        setTimeout(function(){
+            $('.loadingSpinner').fadeOut(
                 function(){
-                    $( '.loading-spinner').remove();
+                    $( '.loadingSpinner').remove();
             });
-           
+
         }, 3000);
     }
 });
