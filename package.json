@@ -32,7 +32,7 @@
     "build": "npm run build:prod && npm run build:dev",
     "build:dev": "node-sass --include-path node_modules src/index.scss css/styles.css && postcss --use autoprefixer css/styles.css -d css/",
     "build:prod": "node-sass --include-path node_modules src/index.scss css/styles.min.css --output-style compressed && postcss --use autoprefixer css/styles.min.css -d css/",
-    "watch": "nodemon --watch ./../sierra/src -e scss -x \"npm run build\""
+    "watch": "nodemon --watch ./../sierra/lib -e scss -x \"npm run build\""
   },
   "private": false,
   "dependencies":{
