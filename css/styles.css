@@ -589,8 +589,6 @@ input:-webkit-autofill {
     width: 100%; }
     .textarea textarea::-webkit-input-placeholder {
       color: #969da6; }
-    .textarea textarea:-ms-input-placeholder {
-      color: #969da6; }
     .textarea textarea::-ms-input-placeholder {
       color: #969da6; }
     .textarea textarea::placeholder {
@@ -728,8 +726,6 @@ input:-webkit-autofill {
     padding: 8px 16px;
     width: 100%; }
     .input input::-webkit-input-placeholder {
-      color: #969da6; }
-    .input input:-ms-input-placeholder {
       color: #969da6; }
     .input input::-ms-input-placeholder {
       color: #969da6; }

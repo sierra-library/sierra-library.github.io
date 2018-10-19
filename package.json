@@ -36,7 +36,7 @@
   },
   "private": false,
   "dependencies":{
-    "sierra-library": "2"
+    "sierra-library": "3"
   },
   "devDependencies": {
     "autoprefixer": "8",
