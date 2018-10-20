@@ -21,50 +21,52 @@
     </head>
     <body>
         <main>
-            <div class="container">
-                <section class="section">
+            <div class="container section">
+                <section>
                     <div class="text-center">
                         <img class="main-logo" src="img/logo.png" alt="Sierra logo" />
                         <div>
                             <h1 class="text-huge text-withSubtitle">Sierra <span class="text-small text-gray">v 3.0.0</span></h1>
                             <h2 class="text-big text-gray">The smallest and lightest SCSS library</h2>
-                            <p><a class="button button-big button--mobileFull" href="https://github.com/sierra-library/sierra/archive/master.zip">Download ZIP</a> or <a class="button button-big button-primary button--mobileFull" href="https://github.com/sierra-library/sierra">Visit github</a></p>
+                            <p class="m-none"><a class="button button-big button--mobileFull" href="https://github.com/sierra-library/sierra/archive/master.zip">Download ZIP</a> or <a class="button button-big button--secondary button--mobileFull" href="https://github.com/sierra-library/sierra">Visit github</a></p>
                         </div>
                     </div>
                 </section>
             </div>
-            <div class="bg-dark">
-                <div class="container">
-                    <div class="row text-center">
-                        <div class="col-12 col-sm-4">
+            <div class="">
+              <div class="bg-dark">
+                  <div class="container">
+                      <div class="row text-center">
+                          <div class="col-12 col-sm-4">
+                              <div class="section">
+                                <img width="118" src="img/lightweight.png" alt="Lightweight" /> <br>
+                                <h2 class="text-withSubtitle text-big text-white">Lightweight <br>
+                                  <span class="text-medium text-gray">37 kB (8.9 kB gzipped).</span></h2>
+                              </div>
+                            </div>
+
+                          <div class="col-12 col-sm-4">
                             <div class="section">
-                              <img width="118" src="img/lightweight.png" alt="Lightweight" /> <br>
-                              <h2 class="text-withSubtitle text-big text-white">Lightweight <br>
-                                <span class="text-medium text-gray">37 kB (8.9 kB gzipped).</span></h2>
+                              <img width="118" src="img/customizable.png" alt="Customizable" /> <br>
+                              <h2 class="text-withSubtitle text-big text-white">Customizable <br>
+                                <span class="text-medium text-gray">Grid, fonts, colors, radius...</span>
+                              </h2>
                             </div>
                           </div>
+                          <div class="col-12 col-sm-4">
+                            <div class="section">
+                              <h2 class="text-withSubtitle text-big text-white">
+                                  <img width="118" src="img/opensource.png" alt="Open Source" /> <br>
+                                  Open Source <br>
 
-                        <div class="col-12 col-sm-4">
-                          <div class="section">
-                            <img width="118" src="img/customizable.png" alt="Customizable" /> <br>
-                            <h2 class="text-withSubtitle text-big text-white">Customizable <br>
-                              <span class="text-medium text-gray">Grid, fonts, colors, radius...</span>
-                            </h2>
+                                  <span class="text-medium text-gray">To nerds, by nerds.</span>
+                              </h2>
+                            </div>
+
                           </div>
-                        </div>
-                        <div class="col-12 col-sm-4">
-                          <div class="section">
-                            <h2 class="text-withSubtitle text-big text-white">
-                                <img width="118" src="img/opensource.png" alt="Open Source" /> <br>
-                                Open Source <br>
-
-                                <span class="text-medium text-gray">To nerds, by nerds.</span>
-                            </h2>
-                          </div>
-
-                        </div>
-                    </div>
-                </div>
+                      </div>
+                  </div>
+              </div>
             </div>
             <div class="container">
                 <section class="section">
@@ -334,7 +336,7 @@
                              <p class="text-error text-small">$error message</p>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mb-big">
                        <div class="col-12 col-md-6">
                             <label class="label" for="message">Message</label>
                             <div class="textarea">
@@ -351,7 +353,7 @@
                     </div>
                     <div class="row">
                         <div class="col-6 col-md-3">
-                            <div class="section">
+                            <div class="mb-big">
                               <h3 class="text-medium text-gray">Radio buttons</h3>
                               <div class="radio">
                                  <input id="radio1" name="radio" type="radio" value=""/>
@@ -367,8 +369,8 @@
                               </div>
                             </div>
                         </div>
-                        <div class="col-6 col-md-3">
-                          <div class="section">
+                        <div class="col-6 col-md-3 mb-big">
+                          <div class="">
                             <h3 class="text-medium text-gray">Checkboxes</h3>
                             <div class="checkbox">
                                <input id="checkbox1" name="keywords" type="checkbox" value=""/>
@@ -387,7 +389,7 @@
                         </div>
                     </div>
                     <h3 class="text-medium text-gray">Inputs with icons</h3>
-                    <div class="row">
+                    <div class="row mb-big">
                       <div class="col-12 col-md-6">
                         <div class="input input-withIcon input-fullWidth">
                              <input id="test1" placeholder="Your name" type="text" />
@@ -495,7 +497,7 @@
                 <section class="section">
                     <h2 class="text-big">Tables</h2>
                     <div class="row">
-                        <div class="col-12 col-md-6">
+                        <div class="col-12 col-md-6 mb-big">
                             <h2 class="text-medium text-gray">Standard</h2>
                             <table class="table">
                                 <thead>
@@ -529,7 +531,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="col-12 col-md-6">
+                        <div class="col-12 col-md-6 mb-big">
                             <h2 class="text-medium text-gray">Responsive</h2>
                             <table class="table table--responsive">
                                 <tr class="text-small">
@@ -557,9 +559,9 @@
                     </div>
                 </section>
 
-                <section class="section">
+                <section class="">
                     <div class="row">
-                        <div class="col-12 col-md-6">
+                        <div class="col-12 col-md-6 mb-big">
                             <h2 class="text-big">Tabs</h2>
                             <div class="tabs">
                                <a href="#" title="Tab 1" class="tabs-item">Tab 1</a>
@@ -614,7 +616,7 @@
                     </ul>
 
                 </section>
-                 <section class="section">
+                 <section class="mb-big">
                     <h2 class="text-big">Badges</h2>
                     <div class="row">
                         <div class="col-12 col-md-6">
@@ -663,10 +665,10 @@
 
 
 
-                <section class="section">
+                <section class="mb-big">
                     <h2 class="text-big">Image modifiers</h2>
                     <div class="row">
-                        <div class="col-12 col-md-6">
+                        <div class="col-12 col-md-6 mb-big">
                             <h2 class="text-medium text-gray">Circle</h2>
                             <div class="row">
                                 <div class="col-4">
@@ -680,7 +682,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6">
+                        <div class="col-12 col-md-6 mb-big">
                             <h2 class="text-medium text-gray">Rounded corners</h2>
                             <div class="row">
                                 <div class="col-4">
@@ -696,10 +698,9 @@
                         </div>
                     </div>
                 </section>
-                <section class="section">
-
-                    <div class="section">
-                      <h2 class="text-big">Aligners</h2>
+                <section class="">
+                  <h2 class="text-big">Aligners</h2>
+                    <div class="mb-big">
                       <h3 class="text-medium text-gray">Space between</h3>
                       <div class="container bg-dark">
                           <div class="section">
@@ -710,7 +711,7 @@
                           </div>
                       </div>
                     </div>
-                    <div class="section">
+                    <div class="mb-big">
                       <h3 class="text-medium text-gray">Space around</h3>
                       <div class="container bg-dark">
                           <div class="section">
@@ -724,8 +725,8 @@
                           </div>
                       </div>
                     </div>
-                    <div class="section row">
-                        <div class="col-12 col-md-6">
+                    <div class="mb-big row">
+                        <div class="col-12 col-md-6 mb-big">
                             <h3 class="text-medium text-gray">Align start</h3>
                             <div class="container bg-dark">
                                 <div class="section">
@@ -748,24 +749,24 @@
                             </div>
                         </div>
                     </div>
-                    <div class="section row">
-                        <div class="col-12 col-md-4">
+                    <div class="mb-big row">
+                        <div class="col-12 col-md-4 mb-big">
                             <h3 class="text-medium text-gray">Center vertical</h3>
                             <div class="container bg-dark" >
                                 <div class="section">
                                     <div class="aligner aligner--centerVertical" style="height:150px;">
-                                        <p class="text-white no-margin">Lorem ipsum dolor sit amet</p>
+                                        <p class="text-white m-none">Lorem ipsum dolor sit amet</p>
                                     </div>
 
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-4">
+                        <div class="col-12 col-md-4 mb-big">
                             <h3 class="text-medium text-gray">Center vertical and horitzontal</h3>
                             <div class="container bg-dark" >
                                 <div class="section">
                                     <div class="aligner aligner--centerHoritzontal aligner--centerVertical" style="height:150px;">
-                                        <p class="text-white no-margin">Lorem ipsum<br />dolor sit amet</p>
+                                        <p class="text-white m-none">Lorem ipsum<br />dolor sit amet</p>
                                     </div>
 
                                 </div>
@@ -776,7 +777,7 @@
                             <div class="container bg-dark" >
                                 <div class="section">
                                     <div class="aligner" style="height:150px;">
-                                        <p class="text-white no-margin aligner--itemBottom">Lorem ipsum dolor sit amet</p>
+                                        <p class="text-white m-none aligner--itemBottom">Lorem ipsum dolor sit amet</p>
                                     </div>
 
                                 </div>
@@ -803,8 +804,8 @@
                         <a href="#" class="js-show-hide-loading-spinner button button--secondary button--mobileFull" title="Start / stop loader">Show loading spinner</a>
                     </div>
                 </section>
-                <section class="section">
-                    <div class="section">
+                <section class="">
+                    <div class="mb-big">
                       <h2 class="text-big">Customizable colors</h2>
                       <h3 class="text-medium text-gray">Brand ( primary / secondary )</h3>
                       <div class="aligner aligner--spaceAround">
@@ -812,7 +813,7 @@
                           <div class="flex-grow bg-secondary"><br><br></div>
                       </div>
                     </div>
-                    <div class="section">
+                    <div class="mb-big">
                       <h3 class="text-medium text-gray">Success / info / error / warning</h3>
                       <div class="aligner aligner--spaceAround">
                           <div class="flex-grow bg-success"><br><br></div>
@@ -821,7 +822,7 @@
                           <div class="flex-grow bg-error"><br><br></div>
                       </div>
                     </div>
-                    <div class="section">
+                    <div class="mb-big">
                       <h3 class="text-medium text-gray">Others</h3>
                       <div class="aligner aligner--spaceAround">
                           <div class="flex-grow bg-white"><br><br></div>
@@ -845,7 +846,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container section">
                 <section>
                     <h2 class="text-big">Notifications</h2>
                     <div class="notification notification--success"><p>Success</p></div>
@@ -888,18 +889,18 @@
                 </div>
             </section>
             <div class="container">
-                <section class="section">
+                <section class="">
                     <h2 class="text-big">Borders</h2>
                     <div class="row">
-                        <div class="col-12 col-md-4 section">
+                        <div class="col-12 col-md-4 mb-big">
                             <h3 class="text-medium text-gray">Border top + border bottom</h3>
                             <div class="container section border-top border-bottom"><br></div>
                         </div>
-                        <div class="col-12 col-md-4 section">
+                        <div class="col-12 col-md-4 mb-big">
                             <h3 class="text-medium text-gray">Border right + border left</h3>
                             <div class="container section border-right border-left"><br></div>
                         </div>
-                        <div class="col-12 col-md-4 section">
+                        <div class="col-12 col-md-4 mb-big">
                             <h3 class="text-medium text-gray">Bordered</h3>
                             <div class="container section border"><br></div>
                         </div>
