@@ -46,3 +46,11 @@ code[class*=language-], pre[class*=language-] {
 .token.lf::before {
   display:none!important;
 }
+
+
+
+@media screen and (max-width: 550px) {
+  .example-image {
+    width: 50px;
+  }
+}
