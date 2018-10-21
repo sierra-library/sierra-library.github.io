@@ -28,3 +28,23 @@ pre {
     width: 50px;
   }
 }
+
+
+.examples {
+  width: 100%;
+}
+.example1,
+.example2, {
+  background-color: $c-gray-light;
+  padding: 16px;
+  text-align: center;
+  max-width: 300px;
+  display: inline-block;
+
+}
+@media screen and (max-width: 550px) {
+  .example1 img,
+  .example2 img, {
+    width: 100% !important;
+  }
+}

@@ -250,6 +250,7 @@ li {
     padding-top: 0; }
 
 .container {
+  background-color: transparent;
   margin: 0 auto;
   max-width: 1380px;
   padding-left: 12px;
@@ -527,7 +528,7 @@ button {
     color: #03a9f4; }
     .button--outlined:hover {
       background-color: transparent;
-      color: #03a9f4;
+      color: rgba(3, 169, 244, 0.8);
       opacity: .8; }
 
 /**
@@ -1954,3 +1955,19 @@ pre {
 @media screen and (max-width: 550px) {
   .example-image {
     width: 50px; } }
+
+.examples {
+  width: 100%; }
+
+.example1,
+.example2 {
+  background-color: #eceff1;
+  padding: 16px;
+  text-align: center;
+  max-width: 300px;
+  display: inline-block; }
+
+@media screen and (max-width: 550px) {
+  .example1 img,
+  .example2 img {
+    width: 100% !important; } }
