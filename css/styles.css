@@ -1301,7 +1301,7 @@ input:-webkit-autofill {
     border-bottom: 3px solid transparent;
     color: #969da6;
     display: inline-block;
-    margin: 0 48px 0 0;
+    margin: 0 16px 0 0;
     min-width: 70px;
     padding: 16px;
     position: relative; }
@@ -1343,7 +1343,7 @@ input:-webkit-autofill {
   color: #607d8b;
   display: inline-block;
   line-height: 16px;
-  margin: 0 48px 16px 0;
+  margin: 0 16px 16px 0;
   padding: 8px;
   position: relative; }
   .tag::before {
@@ -1942,33 +1942,14 @@ input:-webkit-autofill {
     .main-logo {
       max-width: 200px; } }
 
-pre {
-  margin-bottom: 2em !important; }
-
-pre[class*=language-] > code[data-language] {
-  max-height: none !important;
-  overflow: auto !important; }
-
-pre[class*=language-] > code[data-language]::before {
-  display: none !important; }
-
-code[class*=language-], pre[class*=language-] {
-  color: #607d8b !important;
-  text-shadow: none !important; }
-
-:not(pre) > code[class*=language-], pre[class*=language-] {
-  background-color: #18232f !important; }
-
-.token.boolean, .token.constant, .token.number, .token.property, .token.symbol, .token.tag {
-  color: #969da6 !important; }
-
-.token.lf::before {
-  display: none !important; }
-
 .language-js {
   background-color: #eceff1;
   display: inline-block;
   padding: 10px; }
+
+pre {
+  margin-bottom: 2em !important;
+  overflow-x: auto; }
 
 @media screen and (max-width: 550px) {
   .example-image {

@@ -8,6 +8,16 @@
 $(document).ready(function(){
 
     /**
+     * Tabs
+     **/
+
+    $('.js-tab').click(function(){
+      $('.js-tab').removeClass('is-selected');
+      $(this).addClass('is-selected');
+      return false;
+    })
+
+    /**
      * HTML escaper
      **/
 

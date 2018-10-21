@@ -2,59 +2,27 @@
  * Demo website styles
  */
 
-$codefont: 'Courier New', monospace;
-
-
 // main logo
 .main-logo{
-
   width: 250px;
-
   @include media-breakpoint-down(sm) {
     max-width: 200px;
   }
-
-}
-
-pre {
-  margin-bottom: 2em !important;
 }
 
 // code
-pre[class*=language-]>code[data-language] {
-  max-height: none !important;
-  overflow: auto !important;
-}
-
-pre[class*=language-]>code[data-language]::before {
-  display: none !important;
-}
-
-code[class*=language-], pre[class*=language-] {
-  color: $c-text!important;
-  text-shadow: none!important;
-}
-
-:not(pre)>code[class*=language-], pre[class*=language-] {
-  background-color: $c-dark!important;
-}
-
-.token.boolean, .token.constant, .token.number, .token.property, .token.symbol, .token.tag {
-  color:$c-gray!important;
-}
-
-.token.lf::before {
-  display:none!important;
-}
-
-
 .language-js {
   background-color: $c-gray-light;
   display: inline-block;
   padding: 10px;
 }
 
+pre {
+  margin-bottom: 2em !important;
+  overflow-x: auto;
+}
 
+// Alignment example images
 @media screen and (max-width: 550px) {
   .example-image {
     width: 50px;
