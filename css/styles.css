@@ -1962,12 +1962,13 @@ pre {
 .example1,
 .example2 {
   background-color: #eceff1;
-  padding: 16px;
-  text-align: center;
+  display: inline-block;
   max-width: 300px;
-  display: inline-block; }
+  padding: 16px;
+  text-align: center; }
 
 @media screen and (max-width: 550px) {
   .example1 img,
   .example2 img {
+    max-width: auto;
     width: 100% !important; } }

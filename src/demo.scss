@@ -29,22 +29,25 @@ pre {
   }
 }
 
+// Theme customization example images
 
 .examples {
   width: 100%;
 }
+
 .example1,
 .example2, {
   background-color: $c-gray-light;
+  display: inline-block;
+  max-width: 300px;
   padding: 16px;
   text-align: center;
-  max-width: 300px;
-  display: inline-block;
 
 }
 @media screen and (max-width: 550px) {
   .example1 img,
   .example2 img, {
+    max-width: auto;
     width: 100% !important;
   }
 }
