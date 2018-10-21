@@ -1968,7 +1968,9 @@ pre {
   text-align: center; }
 
 @media screen and (max-width: 550px) {
+  .example1,
+  .example2 {
+    max-width: 100%; }
   .example1 img,
   .example2 img {
-    max-width: auto;
     width: 100% !important; } }
