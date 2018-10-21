@@ -16,8 +16,7 @@
         <!-- DEMO Font -->
         <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Lato:400,700,300' type='text/css'>
 
-        <!-- Font awesome icons-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+
     </head>
     <body>
         <main>
@@ -26,10 +25,11 @@
                     <div class="text-center">
                         <img class="main-logo" src="img/logo.png" alt="Sierra logo" />
                         <div>
-                            <h1 class="text-huge text-withSubtitle">Sierra <span class="text-small text-gray">v 3.0.0</span></h1>
+                            <h1 class="text-huge text-withSubtitle">Sierra SCSS Library</h1>
                             <h2 class="text-big text-gray">The smallest and lightest SCSS library</h2>
                             <p class="m-none">
-                              <a class="button button-big button--mobileFull" href="https://github.com/sierra-library/sierra">Visit Github page</a> or <a class="button button-big button--secondary button--mobileFull" href="https://sierra-library.github.io/examples/example1/index.html">Custom theme example</a></p>
+                              <a class="button button--primary button--mobileFull" href="#install">Get started</a> or <a class="button button--outlined button--mobileFull" href="https://github.com/sierra-library/sierra"> Visit Github</a>
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -49,8 +49,8 @@
                           <div class="col-12 col-sm-4">
                             <div class="section">
                               <img width="118" src="img/customizable.png" alt="Customizable" /> <br>
-                              <h2 class="text-withSubtitle text-big text-white">Customizable <br>
-                                <span class="text-medium text-gray">Grid, fonts, colors, radius...</span>
+                              <h2 class="text-withSubtitle text-big text-white">Customizable<br>
+                                <span class="text-medium text-gray">Fonts, colors, sizes...</span>
                               </h2>
                             </div>
                           </div>
@@ -69,62 +69,622 @@
                   </div>
               </div>
             </div>
+            <a name="install"></a>
+            <div class="container section">
+              <h2 class="text-huge">Quick install</h2>
+              <h3 class="text-medium">1.- Download via NPM</h3>
+              <pre><code class="language-js">npm install sierra-library --save-dev</code></pre>
+              <h3 class="text-medium">2.- Import the library from your SCSS files</h3>
+              <pre><code class="language-js">@import 'sierra-library/lib/index';</code></pre>
+              <h3 class="text-medium">3.- Ready to compile!</h3>
+              <p>Need help about that? take a look at our <a href="https://sierra-library.github.io/examples/example1/index.html">example page</a> and  <a href="https://github.com/sierra-library/sierra-library.github.io/tree/master/examples/example1">it's code</a>. </p>
+            </div>
+            <div class="container section">
+
+              <h2 class="text-huge">Theme customization</h3>
+              <p>If you want to customize Sierra library's theme settings, including fonts, margins, paddings and/or colors, create your own custom-settings file and add it just before importing Sierra files:</p>
+              <pre><code class="language-js">@import 'custom-settings';
+@import 'sierra-library/lib/index';</code></pre>
+              <p>This custom-settings.scss file should contain all those <a href="https://github.com/sierra-library/sierra-library.github.io/blob/master/examples/example1/scss/custom-settings.scss">SCSS variables</a> you want to overwrite. Check all settings you can customize in the <a href="https://github.com/sierra-library/sierra/blob/master/src/_settings.scss">settings library file</a>.</p>
+              <p>However, we recommend to duplicate all variables in order to make sure your styles are not being compromised in eventual library updates.</p>
+              <p><strong>Having troubles?</strong> take a look at this customitzation <a href="https://sierra-library.github.io/examples/example1/index.html">example page</a> and  <a href="https://github.com/sierra-library/sierra-library.github.io/tree/master/examples/example1">it's code</a>.</p>
+            </div>
             <div class="container">
-                <section class="section">
-                    <h2 class="text-big">Estructure</h2>
-                    <pre><code class="language-css">    lib/
-     ├── index.scss                         /* Main entry point */
-     ├── _settings.scss                     /* Configuration variables */
-     ├── components
-     |    ├── badge.scss
-     |    ├── buttons.scss
-     |    ├── forms.scss
-     |    ├── loading-bar.scss
-     |    ├── loading-spinner.scss
-     |    ├── notifications.scss
-     |    ├── paginator.scss
-     |    ├── table.scss
-     |    ├── tabs.scss
-     |    └── tag.scss
-     ├── grid
-     |    ├── grid-framework.scss
-     |    └── grid.scss
-     └── utils
-          ├── aligner.scss
-          ├── background.scss
-          ├── border.scss
-          ├── breakpoints.scss
-          ├── default.scss
-          ├── grid.scss
-          ├── helpers.scss
-          ├── layout.scss
-          ├── reset.scss
-          └── typography.scss
-      </code></pre>
+              <h2 class="text-huge">Available components</h3>
+                <section class="">
+                    <h2 class="text-big">Buttons</h2>
+                    <h2 class="text-medium text-gray">Button colors</h2>
+                    <div>
+                        <!-- <button class="button button--mobileFull">default</button> -->
+                        <button class="button button--primary button--mobileFull">primary</button>
+                        <button class="button button--secondary button--mobileFull">secondary</button>
+                        <button class="button button--green button--mobileFull">green</button>
+                        <button class="button button--red button--mobileFull">red</button>
+                        <button class="button button--outlined button--mobileFull">outlined</button>
+                        <button class="button button--transparent button--mobileFull">transparent</button>
+
+                        <!-- <button class="button button--white button--mobileFull">white</button> -->
+                    </div>
+                    <h2 class="text-medium text-gray">Button sizes</h2>
+                    <div>
+                        <button class="button button--big button--mobileFull">Button big</button>
+                        <button class="button block--mobile button--mobileFull">Button default</button>
+                        <button class="button button--small button--mobileFull">Button small</button>
+                    </div>
+                    <section class="section">
+                        <h2 class="text-big">Typography sizes</h2>
+
+                        <h3 class="text-medium text-gray text-withSubtitle">Text huge</h3>
+                        <p class="text-huge text-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+
+                        <h3 class="text-medium text-gray text-withSubtitle">Text big</h3>
+                        <p class="text-big text-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+
+                        <h3 class="text-medium text-gray text-withSubtitle">Text medium</h3>
+                        <p class="text-medium text-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+
+                        <h3 class="text-medium text-gray text-withSubtitle">Text small</h3>
+                        <p class="text-small text-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                    </section>
+                    <section class="section">
+                       <h2 class="text-big">Loaders</h2>
+                       <div>
+                           <a href="#" class="js-show-hide-loading-bar button button--mobileFull" title="Start / stop loader">Show loading bar</a>
+                           <a href="#" class="js-show-hide-loading-spinner button button--secondary button--mobileFull" title="Start / stop loader">Show loading spinner</a>
+                       </div>
+                   </section>
+                    <section class="section">
+                      <h2 class="text-big"> Forms</h2>
+                      <div class="row">
+                          <div class="col-12 col-md-6">
+                              <label class="label" for="test10">Input</label>
+                              <div class="input input-fullWidth">
+                                  <input id="test10" placeholder="Input" type="text" />
+                              </div>
+                          </div>
+
+                          <div class="col-12 col-md-6">
+                              <label class="label text-error" for="test11">Input</label>
+                              <div class="input has-error input-fullWidth">
+                                  <input id="test11" placeholder="Input" type="text" />
+                              </div>
+                              <p class="text-error text-small">$error message</p>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                         <div class="col-12 col-md-6">
+                              <label class="label" for="country-code">Select</label>
+                              <div class="select select-fullWidth">
+                                  <select name="country-code" id="country-code">
+                                          <option>Option 1</option>
+                                          <option>Option 2</option>
+                                          <option>Option 3</option>
+                                          <option>Option 4</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                              <label class="label text-error" for="country-code-error">Select</label>
+                              <div class="select select-fullWidth has-error">
+                                  <select name="country-code-error" id="country-code-error">
+                                          <option>Option 1</option>
+                                          <option>Option 2</option>
+                                          <option>Option 3</option>
+                                          <option>Option 4</option>
+                                  </select>
+                              </div>
+                               <p class="text-error text-small">$error message</p>
+                          </div>
+                      </div>
+                      <div class="row mb-big">
+                         <div class="col-12 col-md-6">
+                              <label class="label" for="message">Textarea</label>
+                              <div class="textarea">
+                                <textarea id="message"></textarea>
+                              </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                              <label class="label text-error" for="message-error">Textarea</label>
+                              <div class="textarea has-error">
+                                <textarea id="message-error"></textarea>
+                              </div>
+                              <p class="text-error text-small">$error message</p>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-6 col-md-3">
+                              <div class="mb-big">
+                                <h3 class="text-medium text-gray">Radio buttons</h3>
+                                <div class="radio">
+                                   <input id="radio1" name="radio" type="radio" value=""/>
+                                   <label for="radio1" >Radio button 1</label>
+                                </div>
+                                <div class="radio">
+                                   <input id="radio2" name="radio" type="radio" value=""/>
+                                   <label for="radio2" >Radio button 2</label>
+                                </div>
+                                <div class="radio">
+                                   <input id="radio3" name="radio" type="radio" value=""/>
+                                   <label for="radio3" >Radio button 3</label>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="col-6 col-md-3 mb-big">
+                            <div class="">
+                              <h3 class="text-medium text-gray">Checkboxes</h3>
+                              <div class="checkbox">
+                                 <input id="checkbox1" name="keywords" type="checkbox" value=""/>
+                                 <label for="checkbox1">Checkbox 1</label>
+                              </div>
+                              <div class="checkbox">
+                                 <input id="checkbox2" name="keywords" type="checkbox" value=""/>
+                                 <label for="checkbox2">Checkbox 2</label>
+                              </div>
+                              <div class="checkbox">
+                                 <input id="checkbox3" name="keywords" type="checkbox" value=""/>
+                                 <label for="checkbox3">Checkbox 3</label>
+                              </div>
+                            </div>
+
+                          </div>
+                      </div>
+                      <h3 class="text-medium text-gray">Inputs with icons</h3>
+                      <div class="row mb-big">
+                        <div class="col-12 col-md-6">
+                          <div class="input input-withIcon input-fullWidth">
+                               <input id="test1" placeholder="Your name" type="text" />
+                               <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><path d="M257,474.1c-62.5,0-125,0-187.5,0c-17.9,0-29.6-11.2-29.9-29c-0.2-12.7-0.3-25.3,0.2-38c0.6-15,7.9-26.5,20.9-33.6   c42.7-23.3,85.6-46.1,128.3-69.3c3.1-1.7,5-0.1,7.3,1.1c36.5,19.1,73.7,20.7,111.7,4.8c1.1-0.4,2.3-0.7,3.2-1.5   c7.9-6.7,15-4,23.2,0.5c38.3,21.1,76.9,41.8,115.5,62.4c16.7,8.9,24.9,22.3,24.6,41.2c-0.2,10.7,0,21.3,0,32   c-0.1,17.7-11.9,29.4-29.5,29.4C382.3,474.1,319.6,474.1,257,474.1z"/><path d="M253.9,295.2c-35.2-1.2-64.4-18.6-85.9-49.5C132.8,195,137,123,177.3,76.8c43.8-50.1,116.4-49.8,159.8,0.6   c46.1,53.6,43.2,138.2-6.7,186.8C310,284.1,285.6,294.8,253.9,295.2z"/></g></svg>
+                           </div>
+                          <div class="input input-withIcon input-fullWidth">
+                            <input id="test2" placeholder="Search" type="text" />
+                            <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 55 55" style="enable-background:new 0 0 55 55;" xml:space="preserve"><path d="M51.9599609,23.9699707l-4.8499756-2.5199585C46.7399902,20.2299805,46.25,19.039978,45.6599731,17.9199829  l1.6400146-5.210022c0.1099854-0.3499756,0.0100098-0.7399902-0.25-1L43.289978,7.9500122  c-0.2600098-0.2600098-0.6500244-0.3600464-1-0.25l-5.210022,1.6399536C35.9599609,8.75,34.7699585,8.2600098,33.5499878,7.8900146  L31.0299683,3.039978C30.8599854,2.7099609,30.5099487,2.5,30.1399536,2.5h-5.2999878  c-0.3699951,0-0.7099609,0.2099609-0.8800049,0.539978l-2.5299683,4.8500366  C20.2099609,8.2600098,19.0299683,8.75,17.8999634,9.3399658l-5.2000122-1.6399536  c-0.3599854-0.1100464-0.75-0.0100098-1.0099487,0.25l-3.7400513,3.7599487c-0.2599487,0.2600098-0.3599854,0.6500244-0.25,1  l1.6400146,5.210022C8.75,19.039978,8.2599487,20.2299805,7.8899536,21.4500122L3.039978,23.9699707  C2.7099609,24.1400146,2.5,24.4899902,2.5,24.8599854v5.2999878c0,0.3699951,0.2099609,0.710022,0.539978,0.8800049  l4.8499756,2.5300293C8.2599487,34.7799683,8.75,35.9699707,9.3399658,37.0999756l-1.6400146,5.2000122  c-0.1099854,0.3599854-0.0099487,0.7399902,0.25,1.0100098l3.7400513,3.7399902  c0.2699585,0.2600098,0.6499634,0.3599854,1.0099487,0.25l5.1900024-1.6400146  c1.1300049,0.6000366,2.3300171,1.0900269,3.5599976,1.4700317l2.5100098,4.8299561  C24.1300049,52.289978,24.4699707,52.5,24.8399658,52.5h5.2999878c0.3699951,0,0.7200317-0.210022,0.8900146-0.5400391  l2.5100098-4.8299561c1.2299805-0.3800049,2.4199829-0.8699951,3.5599976-1.4700317l5.1900024,1.6400146  c0.3499756,0.1099854,0.7399902,0.0100098,1-0.25l3.7600098-3.7399902c0.2600098-0.2700195,0.3599854-0.6500244,0.25-1.0100098  l-1.6400146-5.2000122c0.5900269-1.1300049,1.0800171-2.3200073,1.4500122-3.5299683l4.8499756-2.5300293  C52.289978,30.8699951,52.5,30.5299683,52.5,30.1599731v-5.2999878C52.5,24.4899902,52.289978,24.1400146,51.9599609,23.9699707z   M27.5,37.9400024c-5.7600098,0-10.4400024-4.6799927-10.4400024-10.4400024c0-5.75,4.6799927-10.4299927,10.4400024-10.4299927  c5.75,0,10.4299927,4.6799927,10.4299927,10.4299927C37.9299927,33.2600098,33.25,37.9400024,27.5,37.9400024z"/></svg>
+                          </div>
+                          <div class="input input-withIcon input-fullWidth">
+                            <input id="test3" placeholder="Search" type="text" />
+                            <svg class="input-icon" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"  version="1.1" x="0px" y="0px" viewBox="0 0 100 100"><g transform="translate(0,-952.36218)"><path style="text-indent:0;text-transform:none;direction:ltr;block-progression:tb;baseline-shift:baseline;color:#000000;enable-background:accumulate;" d="M 43.0018,963.36218 C 25.3871,963.36218 11,977.74333 11,995.35117 c 0,17.60773 14.387,31.98903 32.0018,31.98903 7.0044,0 13.5002,-2.2762 18.7822,-6.1229 l 18.6886,18.681 c 1.9524,1.9518 5.1103,1.9519 7.0628,0 1.9528,-1.9518 1.9528,-5.1394 0,-7.0912 l -18.6572,-18.6499 c 3.8572,-5.2836 6.1253,-11.7953 6.1253,-18.80603 0,-17.60784 -14.3871,-31.98899 -32.0017,-31.98899 z m 0,9.99656 c 12.2099,0 22.0012,9.78723 22.0012,21.99243 0,12.20513 -9.7914,21.99243 -22.0012,21.99243 -12.2099,0 -22.0013,-9.7873 -22.0013,-21.99243 0,-12.2052 9.7913,-21.99243 22.0013,-21.99243 z" fill-opacity="1" stroke="none" marker="none" visibility="visible" display="inline" overflow="visible"/></g></svg>
+
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <div class="input input-withIcon input-fullWidth">
+                            <input id="test4" placeholder="Date" type="text" />
+                            <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><symbol viewBox="-27.299 -39.024 54.598 78.047"><path fill="none" d="M11.157,34.02c-1.275-1.85-3.408-3.026-5.733-3.026c-2.13,0-4.118,0.985-5.424,2.607   c-1.306-1.622-3.294-2.607-5.423-2.607c-2.325,0-4.457,1.176-5.734,3.026c-1.275-1.85-3.408-3.026-5.733-3.026   c-1.913,0-3.648,0.776-4.908,2.029v-66.474c1.26,1.253,2.995,2.029,4.908,2.029c2.325,0,4.458-1.176,5.733-3.026   c1.277,1.85,3.409,3.026,5.734,3.026c2.129,0,4.117-0.986,5.423-2.607c1.306,1.622,3.294,2.607,5.424,2.607   c2.325,0,4.458-1.176,5.733-3.026c1.277,1.85,3.409,3.026,5.734,3.026c1.913,0,3.647-0.776,4.907-2.028v66.473   c-1.26-1.253-2.994-2.028-4.907-2.028C14.567,30.995,12.435,32.17,11.157,34.02z"/><path stroke-width="3" stroke-miterlimit="10" d="M-20.463-37.524   c0.391,1.615,1.839,2.822,3.573,2.822c1.733,0,3.181-1.207,3.572-2.822h4.323c0.391,1.615,1.839,2.822,3.573,2.822   s3.182-1.207,3.573-2.822h3.701c0.391,1.615,1.839,2.822,3.573,2.822s3.182-1.207,3.573-2.822h4.322   c0.391,1.615,1.839,2.822,3.573,2.822s3.182-1.207,3.573-2.822h5.335v75.047h-5.266c-0.219-1.825-1.759-3.25-3.641-3.25   s-3.423,1.425-3.641,3.25H9.065c-0.219-1.825-1.759-3.25-3.641-3.25s-3.423,1.425-3.641,3.25h-3.564   c-0.219-1.825-1.759-3.25-3.641-3.25s-3.423,1.425-3.641,3.25h-4.186c-0.219-1.825-1.758-3.25-3.641-3.25   c-1.883,0-3.423,1.425-3.641,3.25h-5.267v-75.047H-20.463z"/></symbol><symbol viewBox="-30.282 -48.056 60.563 94.113"><path fill="#000000" stroke="#000000" stroke-width="6" stroke-miterlimit="10" d="M16.006,43.056   c-3.233-4.883-8.77-8.108-15.065-8.108s-11.832,3.225-15.065,8.108h-10.584v-88.113h10.584c3.233,4.883,8.77,8.108,15.065,8.108   s11.832-3.224,15.065-8.108H26.59v88.113H16.006z"/><line fill="none" stroke="#000000" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="7,8" x1="27.781" y1="-20.755" x2="-27.782" y2="-20.755"/></symbol><symbol viewBox="-24.712 -42.834 54.356 85.667"><path fill="#000000" stroke="#000000" stroke-width="5" stroke-miterlimit="10" d="M17.181,40.333h-4.475   c-0.466-2.355-2.539-4.131-5.031-4.131c-2.491,0-4.565,1.776-5.03,4.131h-4.883c-0.466-2.355-2.539-4.131-5.031-4.131   c-2.491,0-4.565,1.776-5.03,4.131h-4.883c-0.466-2.355-2.539-4.131-5.03-4.131v-72.023c2.622,0,4.76-1.974,5.069-4.512h4.806   c0.309,2.539,2.447,4.512,5.069,4.512c2.622,0,4.76-1.974,5.069-4.512h4.806c0.309,2.539,2.447,4.512,5.069,4.512   c2.622,0,4.76-1.974,5.069-4.512h4.398c0.309,2.539,2.447,4.512,5.069,4.512v72.023C19.72,36.202,17.647,37.978,17.181,40.333z"/><line fill="none" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="7,6" x1="-22.644" y1="-17.395" x2="27.644" y2="-17.395"/></symbol><symbol viewBox="-23.971 -42.094 47.944 84.188"><g><path fill="#000000" stroke="#000000" stroke-width="3.521" stroke-miterlimit="10" d="M17.182,40.333h-4.475    c-0.466-2.355-2.539-4.131-5.031-4.131c-2.491,0-4.565,1.776-5.03,4.131h-4.883c-0.466-2.355-2.539-4.131-5.031-4.131    c-2.491,0-4.565,1.776-5.03,4.131h-4.883c-0.466-2.355-2.539-4.131-5.03-4.131v-72.023c2.622,0,4.76-1.974,5.069-4.512h4.806    c0.309,2.539,2.447,4.512,5.069,4.512c2.622,0,4.76-1.974,5.069-4.512h4.806c0.309,2.539,2.447,4.512,5.069,4.512    c2.622,0,4.76-1.974,5.069-4.512h4.398c0.309,2.539,2.447,4.512,5.069,4.512v72.023C19.721,36.202,17.648,37.978,17.182,40.333z"/></g><polygon fill="#000000" stroke="#000000" stroke-width="3.8113" stroke-miterlimit="10" points="5.14,17.02 11.952,13.853    8.431,7.217 7.524,-0.241 0.124,1.057 -7.248,-0.385 -8.301,7.053 -11.951,13.62 -5.201,16.919 -0.084,22.42  "/></symbol><symbol id="a" viewBox="-21.087 -31.266 42.17 72.87"><path fill="#000000" stroke="#000000" stroke-width="5" stroke-miterlimit="10" d="M6.373,39.104h5.21c0-3.87,3.13-7,7-7v-53.87   c-3.87,0-7-3.14-7-7h-5.21"/><path fill="#000000" stroke="#000000" stroke-width="5" stroke-miterlimit="10" d="M-6.377-28.766h-5.21c0,3.86-3.13,7-7,7v53.87   c3.87,0,7,3.13,7,7h5.21"/><line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="2.373" y1="39.104" x2="-2.377" y2="39.104"/><line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="2.373" y1="-28.766" x2="-2.377" y2="-28.766"/><g><path stroke="#000000" stroke-width="0.9" stroke-miterlimit="10" d="M-9.901-10.118c0-0.994-0.806-1.8-1.8-1.8    s-1.8,0.806-1.8,1.8s0.806,1.8,1.8,1.8S-9.901-9.124-9.901-10.118z"/><path stroke="#000000" stroke-width="0.9" stroke-miterlimit="10" d="M-2.101-10.118c0-0.994-0.806-1.8-1.8-1.8    s-1.8,0.806-1.8,1.8s0.806,1.8,1.8,1.8S-2.101-9.124-2.101-10.118z"/><path stroke="#000000" stroke-width="0.9" stroke-miterlimit="10" d="M5.699-10.118c0-0.994-0.806-1.8-1.8-1.8s-1.8,0.806-1.8,1.8    s0.806,1.8,1.8,1.8S5.699-9.124,5.699-10.118z"/><path stroke="#000000" stroke-width="0.9" stroke-miterlimit="10" d="M13.499-10.118c0-0.994-0.806-1.8-1.8-1.8    s-1.8,0.806-1.8,1.8s0.806,1.8,1.8,1.8S13.499-9.124,13.499-10.118z"/></g></symbol><symbol viewBox="-21.086 -31.266 42.17 72.87"><use xlink:href="#a" width="42.17" height="72.87" x="-21.087" y="-31.266" transform="matrix(1 0 0 1 6.996482e-004 -2.671033e-004)" overflow="visible"/><line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="9.224" y1="13.75" x2="-9.223" y2="13.75"/></symbol><g display="none"><path display="inline" fill="#000000" d="M948.792,1194.743H-289.006c-2.084,0-3.789-1.705-3.789-3.789V3.789   c0-2.084,1.705-3.789,3.789-3.789H948.792c2.084,0,3.789,1.705,3.789,3.789v1187.164   C952.582,1193.038,950.877,1194.743,948.792,1194.743z"/></g><g><g><path fill="none" d="M16.728,88.786h66.544c2.539,0,4.604-2.065,4.604-4.604V37.94H12.124v46.241    C12.124,86.72,14.189,88.786,16.728,88.786z M67.638,43.906h12.969v10.375H67.638V43.906z M67.638,57.394h12.969V67.77H67.638    V57.394z M67.638,70.883h12.969v10.375H67.638V70.883z M51.556,43.906h12.969v10.375H51.556V43.906z M51.556,57.394h12.969V67.77    H51.556V57.394z M51.556,70.883h12.969v10.375H51.556V70.883z M35.474,43.906h12.969v10.375H35.474V43.906z M35.474,57.394h12.969    V67.77H35.474V57.394z M35.474,70.883h12.969v10.375H35.474V70.883z M19.392,43.906h12.969v10.375H19.392V43.906z M19.392,57.394    h12.969V67.77H19.392V57.394z M19.392,70.883h12.969v10.375H19.392V70.883z"/><path d="M16.728,95h66.544c5.965,0,10.818-4.853,10.818-10.818V24.9c0-5.965-4.853-10.818-10.818-10.818H83.22v3.572v1.592    c0,3.721-3.026,6.747-6.747,6.747h-0.796c-3.721,0-6.747-3.026-6.747-6.747V17.19v-3.107H31.069v3.107v2.057    c0,3.721-3.026,6.747-6.747,6.747h-0.796c-3.72,0-6.747-3.026-6.747-6.747v-1.592v-3.572h-0.052    c-5.965,0-10.818,4.853-10.818,10.818v59.281C5.91,90.147,10.763,95,16.728,95z M12.124,37.94h75.752v46.241    c0,2.539-2.065,4.604-4.604,4.604H16.728c-2.539,0-4.604-2.065-4.604-4.604V37.94z"/><rect x="19.392" y="43.906" width="12.969" height="10.375"/><rect x="35.474" y="43.906" width="12.969" height="10.375"/><rect x="51.556" y="43.906" width="12.969" height="10.375"/><rect x="67.638" y="43.906" width="12.969" height="10.375"/><rect x="19.392" y="57.394" width="12.969" height="10.375"/><rect x="35.474" y="57.394" width="12.969" height="10.375"/><rect x="51.556" y="57.394" width="12.969" height="10.375"/><rect x="67.638" y="57.394" width="12.969" height="10.375"/><rect x="19.392" y="70.883" width="12.969" height="10.375"/><rect x="35.474" y="70.883" width="12.969" height="10.375"/><rect x="51.556" y="70.883" width="12.969" height="10.375"/><rect x="67.638" y="70.883" width="12.969" height="10.375"/><path d="M23.526,23.096h0.796c2.122,0,3.849-1.727,3.849-3.849V8.849C28.172,6.727,26.444,5,24.322,5h-0.796    c-2.122,0-3.849,1.727-3.849,3.849v10.398C19.678,21.369,21.404,23.096,23.526,23.096z"/><path d="M75.677,23.096h0.796c2.122,0,3.849-1.727,3.849-3.849V8.849C80.322,6.727,78.595,5,76.473,5h-0.796    c-2.122,0-3.849,1.727-3.849,3.849v10.398C71.828,21.369,73.555,23.096,75.677,23.096z"/></g></g></svg>
+                          </div>
+                          <div class="input input-withIcon input-fullWidth">
+                            <input id="test5" placeholder="Email" type="text" />
+                            <svg class="input-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"> <path d="M49.7,6h-0.2C24.9,6,5,25.9,5,50.5c0,0.1,0,0.1,0,0.2C5.1,75.1,25.6,95,50.7,95h1.6c3.1,0,5.6-2.5,5.6-5.6 c0-3.1-2.5-5.6-5.6-5.6h-1.6c-19,0-34.4-14.9-34.5-33.2C16,32.2,30.9,17.2,49.3,17.1c0.1,0,0.1,0,0.2,0h0.2 C68,17.2,82.9,32.7,82.9,51.7v12.8c0,3.1-2.5,5.6-5.6,5.6c-3.1,0-5.6-2.5-5.6-5.6V50.5c0-12.3-9.9-22.4-22.2-22.4 c-12.3,0-22.4,9.9-22.4,22.2c0,12.3,9.9,22.4,22.2,22.4c4.2,0,8.4-1.2,12-3.5c2.7,8.8,12,13.8,20.9,11c7-2.2,11.8-8.6,11.8-15.9 V51.7C94,26.6,74.1,6.1,49.7,6z M49.5,61.6c-6.1,0-11.1-5-11.1-11.1s5-11.1,11.1-11.1s11.1,5,11.1,11.1S55.6,61.6,49.5,61.6z"/></svg>
+                          </div>
+                          <div class="input input-withIcon input-fullWidth">
+                            <input id="test6" placeholder="Password" type="password" />
+                            <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" x="0px" y="0px"><g><path d="M21.87,100l-1.31-.32a11.38,11.38,0,0,1-9-11.21q-0.1-19.24,0-38.47A11.4,11.4,0,0,1,23.37,38.5q26.61,0,53.22,0a11.44,11.44,0,0,1,11.7,9.78,3.91,3.91,0,0,0,.18.55V89.65a5.76,5.76,0,0,0-.2.64,11.32,11.32,0,0,1-7.73,9.08c-0.78.29-1.62,0.43-2.43,0.63H21.87ZM46.11,76.62c0,1.3,0,2.6,0,3.91a3.89,3.89,0,1,0,7.78.14c0.05-2.57,0-5.14,0-7.71a1.56,1.56,0,0,1,.71-1.44,7.38,7.38,0,0,0,3-7.66A7.69,7.69,0,0,0,43.11,62c-1.46,2.8-1.11,6.54,1.36,8.61A4.64,4.64,0,0,1,46.11,75C46.08,75.51,46.11,76.06,46.11,76.62Z"/><path d="M51.75,0c2.13,0.39,4.31.62,6.4,1.19A23.21,23.21,0,0,1,72.22,11.91c3.5,5.73,4.61,12.08,4.69,18.68,0,1.27,0,2.53,0,3.89H65.43c0-.39,0-0.83,0-1.27a36.26,36.26,0,0,0-1-10.55C63.1,18,60.7,14,55.79,12.49c-5.66-1.79-11.16-1.54-15.87,2.6-2.83,2.49-4.16,5.88-4.75,9.5-0.38,2.33-.43,4.72-0.59,7.09-0.06.91,0,1.82,0,2.81H23.1c0-1.13,0-2.29,0-3.45,0-5.71.79-11.29,3.31-16.5,3.88-8,10.2-12.79,19-14.14L48.23,0h3.52Z"/></g></svg>
+                          </div>
+                        </div>
+
+                      </div>
+                      <h3 class="text-medium text-gray">Collapsed forms</h3>
+                      <div class="row">
+                          <div class="col-12 col-md-6">
+                              <div class="formCollapsed">
+                                  <div class="input formCollapsed-item formCollapsed-itemPrimary">
+                                      <input id="test7" placeholder="Search" type="text" />
+                                  </div>
+                                  <div class="select formCollapsed-item">
+                                      <select name="country-code" id="country-code">
+                                          <option>One</option>
+                                          <option>Two</option>
+                                          <option>Three</option>
+                                          <option>Four</option>
+                                      </select>
+                                  </div>
+                                  <button class="formCollapsed-item button button-primary">
+                                      Search
+                                  </button>
+                              </div>
+
+                          </div>
+
+                          <div class="col-12 col-md-6">
+                              <div class="formCollapsed">
+                                  <div class="input formCollapsed-item formCollapsed-itemPrimary">
+                                      <input id="test8" placeholder="Search" type="text" />
+                                  </div>
+                                  <button class="formCollapsed-item button button-primary">
+                                    Search
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row mb-big">
+                          <div class="col-12 col-md-6">
+                              <div class="formCollapsed">
+                                  <div class="select formCollapsed-item formCollapsed-itemPrimary">
+                                      <select name="country-code" id="country-code">
+                                          <option>Vincent</option>
+                                          <option>Jules</option>
+                                          <option>Mia </option>
+                                          <option>Butch</option>
+                                          <option>Winston </option>
+                                      </select>
+                                  </div>
+                                  <div class="select formCollapsed-item formCollapsed-itemPrimary">
+                                      <select name="country-code" id="country-code">
+                                          <option>Mr. White</option>
+                                          <option>Mr. Orange</option>
+                                          <option>Mr. Pink</option>
+                                          <option>Mr. Blonde</option>
+                                          <option>Nice Guy</option>
+                                          <option>Mr. Brown</option>
+                                          <option>Marvin</option>
+                                          <option>Holdaway</option>
+                                          <option>Mr. Blue</option>
+                                      </select>
+                                  </div>
+                                   <div class="select formCollapsed-item formCollapsed-itemPrimary">
+                                      <select name="country-code" id="country-code">
+                                          <option>Shaw </option>
+                                          <option>Kelly</option>
+                                          <option>Doyle </option>
+                                          <option>Lt. William</option>
+                                          <option>Singleton</option>
+                                          <option>Billie</option>
+                                      </select>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <h2 class="text-big">Tables</h2>
+                      <div class="row">
+                          <div class="col-12 col-md-6 mb-big">
+                              <h2 class="text-medium text-gray">Standard</h2>
+                              <table class="table">
+                                  <thead>
+                                      <tr class="text-small text-left">
+                                          <th>Header 1</th>
+                                          <th>Header 2</th>
+                                          <th>Header 3</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr>
+                                          <td>Lemon</td>
+                                          <td>Orange</td>
+                                          <td>Kiwi</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Sugar</td>
+                                          <td>Salt</td>
+                                          <td>Pepper</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Fork</td>
+                                          <td>Knife</td>
+                                          <td>Spoon</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Cup</td>
+                                          <td>Glass</td>
+                                          <td>Pitcher</td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                          <div class="col-12 col-md-6 mb-big">
+                              <h2 class="text-medium text-gray">Responsive</h2>
+                              <table class="table table--responsive">
+                                  <tr class="text-small">
+                                      <th>First column</th>
+                                      <th>Second column</th>
+                                      <th>Third column</th>
+                                  </tr>
+                                  <tr>
+                                      <td data-th="First column">Blue</td>
+                                      <td data-th="Second column">One</td>
+                                      <td data-th="Third column">My life fades</td>
+                                  </tr>
+                                  <tr>
+                                      <td data-th="First column">Green</td>
+                                      <td data-th="Second column">Two</td>
+                                      <td data-th="Third column">When the world was powered by the black fuel... and the desert sprouted great cities of pipe and steel. </td>
+                                  </tr>
+                                  <tr>
+                                      <td data-th="First column">Yellow</td>
+                                      <td data-th="Second column">Three</td>
+                                      <td data-th="Third column">A whirlwind of looting, a firestorm of fear. Men began to feed on men. A whirlwind of looting, a firestorm of fear. Men began to feed on men. </td>
+                                  </tr>
+                              </table>
+                          </div>
+                      </div>
+                    </section>
+                    <section class="section">
+                      <div class="row">
+                          <div class="col-12 col-md-6 mb-big">
+                              <h2 class="text-big">Tabs</h2>
+                              <div class="tabs">
+                                 <a href="#" title="Tab 1" class="tabs-item">Tab 1</a>
+                                 <a href="#" title="Tab 2" class="tabs-item is-selected">Tab 2</a>
+                                 <a href="#" title="Tab 3" class="tabs-item">Tab 3</a>
+                              </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                              <h2 class="text-big">Tags</h2>
+                              <ul>
+                                  <li class="tag">
+                                      <a href="#">fantasy</a>
+                                  </li>
+                                  <li class="tag">
+                                      <a href="#">fiction</a>
+                                  </li>
+                                  <li class="tag">
+                                      <a href="#">contemporary</a>
+                                  </li>
+                                  <li class="tag">
+                                      <a href="#">horror</a>
+                                  </li>
+                                  <li class="tag">
+                                      <a href="#">science-fiction</a>
+                                  </li>
+                                  <li class="tag">
+                                      <a href="#">thriller</a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                    </section>
+                    <section class="section">
+                        <h2 class="text-big">Paginator</h2>
+                        <ul class="paginator">
+                            <li class="paginator-item">
+                                <a href="#" class="paginator-itemLink"> <&nbsp; Prev </a>
+                            </li>
+                            <li class="paginator-item">
+                                <a href="#" class="paginator-itemLink">1</a>
+                            </li>
+                            <li class="paginator-item">
+                                <a href="#" class="paginator-itemLink is-active">2</a>
+                            </li>
+                            <li class="paginator-item">
+                                <a href="#" class="paginator-itemLink">3</a>
+                            </li>
+                            <li class="paginator-item">
+                                <a href="#" class="paginator-itemLink">Next &nbsp;>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="mb-big">
+                       <h2 class="text-big">Badges</h2>
+                       <div class="row">
+                           <div class="col-12 col-md-6">
+
+                               <h2 class="text-medium text-gray">Sizes</h2>
+                               <ul class="">
+                                   <li class="badge badge--small">
+                                       small badge
+                                   </li>
+                                   <li class="badge">
+                                       default badge
+                                   </li>
+                                   <li class="badge badge--big">
+                                       big badge
+                                   </li>
+                               </ul>
+                           </div>
+                           <div class="col-12 col-md-6">
+                               <h2 class="text-medium text-gray">Colors</h2>
+                               <ul>
+                                   <li class="badge">
+                                       default
+                                   </li>
+                                   <li class="badge badge--primary">
+                                       primary
+                                   </li>
+                                   <li class="badge badge--secondary">
+                                       secondary
+                                   </li>
+                                   <li class="badge badge--dark">
+                                       dark
+                                   </li>
+                                   <li class="badge badge--success">
+                                       success
+                                   </li>
+                                   <li class="badge badge--warning">
+                                       warning
+                                   </li>
+                                   <li class="badge badge--error">
+                                       error
+                                   </li>
+                               </ul>
+                           </div>
+                       </div>
+                   </section>
+                   <section class="mb-big">
+                       <h2 class="text-big">Image modifiers</h2>
+                       <div class="row">
+                           <div class="col-12 col-md-6 mb-big">
+                               <h2 class="text-medium text-gray">Circle</h2>
+                               <div class="row">
+                                   <div class="col-4">
+                                       <img class="rounded" src="img/img1.jpg" alt="Image 1" width="100%"/>
+                                   </div>
+                                   <div class="col-4">
+                                       <img class="rounded" src="img/img2.jpg" alt="Image 2" width="100%"/>
+                                   </div>
+                                   <div class="col-4">
+                                       <img class="rounded" src="img/img3.jpg" alt="Image 3" width="100%"/>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-12 col-md-6 mb-big">
+                               <h2 class="text-medium text-gray">Rounded corners</h2>
+                               <div class="row">
+                                   <div class="col-4">
+                                       <img class="rounded-corners" src="img/img4.jpg" alt="Image 4" width="100%"/>
+                                   </div>
+                                   <div class="col-4">
+                                       <img class="rounded-corners" src="img/img5.jpg" alt="Image 5" width="100%"/>
+                                   </div>
+                                   <div class="col-4">
+                                       <img class="rounded-corners" src="img/img6.jpg" alt="Image 6" width="100%"/>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </section>
+                   <section class="">
+                     <h2 class="text-big">Aligners</h2>
+                       <div class="mb-big">
+                         <h3 class="text-medium text-gray">Space between</h3>
+                         <div class="container bg-gray-light">
+                             <div class="section">
+                                 <div class="aligner aligner--spaceBetween">
+                                     <div><img class="example-image" src="img/img4.jpg" alt="Image 4" width="150"/></div>
+                                     <div><img class="example-image" src="img/img5.jpg" alt="Image 5" width="150"/></div>
+                                 </div>
+                             </div>
+                         </div>
+                       </div>
+                       <div class="mb-big">
+                         <h3 class="text-medium text-gray">Space around</h3>
+                         <div class="container bg-gray-light">
+                             <div class="section">
+                                 <div class="aligner aligner--spaceAround">
+                                     <div><img class="example-image" src="img/img6.jpg" alt="Image 6" width="150"/></div>
+                                     <div><img class="example-image" src="img/img5.jpg" alt="Image 5" width="150"/></div>
+                                     <div><img class="example-image" src="img/img1.jpg" alt="Image 1" width="150"/></div>
+                                     <div><img class="example-image" src="img/img2.jpg" alt="Image 2" width="150"/></div>
+                                 </div>
+
+                             </div>
+                         </div>
+                       </div>
+                       <div class="mb-big row">
+                           <div class="col-12 col-md-6 mb-big">
+                               <h3 class="text-medium text-gray">Align start</h3>
+                               <div class="container bg-gray-light">
+                                   <div class="section">
+                                       <div class="aligner aligner--contentStart">
+                                           <div><img class="example-image" src="img/img1.jpg" alt="Image 1" width="150"/></div>
+                                       </div>
+
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-12 col-md-6">
+                               <h3 class="text-medium text-gray">Align end</h3>
+                               <div class="container bg-gray-light">
+                                   <div class="section">
+                                       <div class="aligner aligner--contentEnd">
+                                           <div><img class="example-image" src="img/img3.jpg" alt="Image 3" width="150"/></div>
+                                       </div>
+
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="mb-big row">
+                           <div class="col-12 col-md-4 mb-big">
+                               <h3 class="text-medium text-gray">Center vertical</h3>
+                               <div class="container bg-gray-light" >
+                                   <div class="section">
+                                       <div class="aligner aligner--centerVertical" style="height:150px;">
+                                           <p class="m-none">Lorem ipsum dolor sit amet</p>
+                                       </div>
+
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-12 col-md-4 mb-big">
+                               <h3 class="text-medium text-gray">Center vertical and horitzontal</h3>
+                               <div class="container bg-gray-light" >
+                                   <div class="section">
+                                       <div class="aligner aligner--centerHoritzontal aligner--centerVertical" style="height:150px;">
+                                           <p class="m-none">Lorem ipsum<br />dolor sit amet</p>
+                                       </div>
+
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-12 col-md-4">
+                               <h3 class="text-medium text-gray">Align to bottom</h3>
+                               <div class="container bg-gray-light" >
+                                   <div class="section">
+                                       <div class="aligner" style="height:150px;">
+                                           <p class="m-none aligner--itemBottom">Lorem ipsum dolor sit amet</p>
+                                       </div>
+
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </section>
+                   <section class="">
+                       <h2 class="text-big">Low opacity</h2>
+                       <div class="container bg-gray-light">
+                           <div class="section">
+                               <div class="aligner aligner--centerHoritzontal aligner--centerVertical" style="height:150px;">
+                                   <img class="opacity-low" src="img/img1.jpg" alt="Image 1" width="150"/>
+                               </div>
+
+                           </div>
+                       </div>
+
+                   </section>
+
+                   <section class="section">
+                       <div class="mb-big">
+                         <h2 class="text-big">Customizable colors</h2>
+                         <h3 class="text-medium text-gray">Brand ( primary / secondary )</h3>
+                         <div class="aligner aligner--spaceAround">
+                             <div class="flex-grow bg-primary"><br><br></div>
+                             <div class="flex-grow bg-secondary"><br><br></div>
+                         </div>
+                       </div>
+                       <div class="mb-big">
+                         <h3 class="text-medium text-gray">Success / info / error / warning</h3>
+                         <div class="aligner aligner--spaceAround">
+                             <div class="flex-grow bg-success"><br><br></div>
+                             <div class="flex-grow bg-info"><br><br></div>
+                             <div class="flex-grow bg-warning"><br><br></div>
+                             <div class="flex-grow bg-error"><br><br></div>
+                         </div>
+                       </div>
+                       <div class="">
+                         <h3 class="text-medium text-gray">Others</h3>
+                         <div class="aligner aligner--spaceAround">
+                             <div class="flex-grow bg-gray-light"><br><br></div>
+                             <div class="flex-grow bg-gray"><br><br></div>
+                             <div class="flex-grow bg-dark"><br><br></div>
+                         </div>
+                       </div>
+                   </section>
+
+               </div>
+
+               <div class="section">
+                   <div class="container">
+                       <h2 class="text-big">Full width bars</h2>
+                   </div>
+                   <div class="section bg-dark">
+                       <div class="container text-center">
+                           <h3 class="text-huge text-white text-withSubtitle">We can be heroes</h3>
+                           <h4 class="text-big text-gray m-none">just for one day</h4>
+                       </div>
+                   </div>
+               </div>
                 </section>
-
-
-                <section class="section">
+            </div>
+            <div class="container section">
+                <section class="">
                     <h2 class="text-big">Text modifiers</h2>
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <h2 class="text-medium text-gray">Default</h2>
                             <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor <a href="#" title="in reprehenderit">in reprehenderit</a> in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                quis nostrud <a href="#">exercitation ullamco</a> laboris nisi ut aliquip ex ea commodo
+                                consequat.
                             </p>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                            <!--  <p><button class="button button-only-icon button-outlined"><i class="fa fa-code"></i></button>
-                            <pre><code class="language-html"><p>[...]</p></code></pre></p> -->
 
                         </div>
                         <div class="col-12 col-md-6">
@@ -132,19 +692,9 @@
                             <p class="text-gray"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                consequat.
                             </p>
-                            <p class="text-gray"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                            <!-- <p><button class="button button-only-icon button-outlined"><i class="fa fa-code"></i></button>
-                            <pre><code class="language-html"><p class="text-gray">[...]</p></code></pre></p> -->
+
                         </div>
 
                     </div>
@@ -152,31 +702,19 @@
                         <div class="col-12 col-md-4">
                             <h2 class="text-medium text-gray">Primary color</h2>
                             <p class="text-primary"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
                         <div class="col-12 col-md-4">
                             <h2 class="text-medium text-gray">Success color</h2>
                             <p class="text-success"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
                         <div class="col-12 col-md-4">
                             <h2 class="text-medium text-gray">Error color</h2>
                             <p class="text-error"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
                     </div>
@@ -186,19 +724,12 @@
                             <p class="text-center"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                consequat.
                             </p>
                         </div>
                         <div class="col-12 col-md-6">
                             <h2 class="text-medium text-gray">Align right</h2>
-                            <p class="text-right"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            <p class="text-right"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                             </p>
                         </div>
                     </div>
@@ -206,718 +737,85 @@
                         <div class="col-12 col-md-4">
                             <h2 class="text-medium text-gray">Uppercase</h2>
                             <p class="text-uppercase"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur.
+                                tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
                         <div class="col-12 col-md-4">
                             <h2 class="text-medium text-gray">Line through</h2>
                             <p class="text-lineThrough"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur.
+                                tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
                         <div class="col-12 col-md-4">
                             <h2 class="text-medium text-gray">Italic</h2>
                             <p class="text-italic"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur.
+                                tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
                     </div>
 
-
-                </section>
-
-
-                <section class="section">
-                    <h2 class="text-big">Buttons</h2>
-                    <h2 class="text-medium text-gray">Button colors</h2>
-                    <div>
-                        <button class="button button--mobileFull">default</button>
-                        <button class="button button--primary button--mobileFull">primary</button>
-                        <button class="button button--secondary button--mobileFull">secondary</button>
-                        <button class="button button--white button--mobileFull">white</button>
-                        <button class="button button--green button--mobileFull">green</button>
-                        <button class="button button--red button--mobileFull">red</button>
-                        <button class="button button--transparent button--mobileFull">transparent</button>
+                    <div class="section">
+                        <section>
+                            <h2 class="text-big">Notifications</h2>
+                            <div class="notification notification--success"><p>Success</p></div>
+                            <div class="notification notification--info"><p>Info</p></div>
+                            <div class="notification notification--warning"><p>Warning</p></div>
+                            <div class="notification notification--error"><p>Error</p></div>
+                        </section>
                     </div>
-                    <h2 class="text-medium text-gray">Button sizes</h2>
-                    <div>
-                        <button class="button button--big button--mobileFull">Button big</button>
-                        <button class="button block--mobile button--mobileFull">Button default</button>
-                        <button class="button button--small button--mobileFull">Button small</button>
-                    </div>
-                </section>
-
-                <section class="section">
-                    <h2 class="text-big">Typography sizes</h2>
-
-                    <h3 class="text-medium text-gray text-withSubtitle">Text huge</h3>
-                    <p class="text-huge text-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-
-                    <h3 class="text-medium text-gray text-withSubtitle">Text big</h3>
-                    <p class="text-big text-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-
-                    <h3 class="text-medium text-gray text-withSubtitle">Text medium</h3>
-                    <p class="text-medium text-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-
-                    <h3 class="text-medium text-gray text-withSubtitle">Text small</h3>
-                    <p class="text-small text-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                </section>
-
-                <section class="section">
-                    <h2 class="text-big"> Forms</h2>
-
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <label class="label" for="test10">Name</label>
-                            <div class="input input-fullWidth">
-                                <input id="test10" placeholder="Name" type="text" />
+                    <section class="">
+                        <h2 class="text-big">Borders</h2>
+                        <div class="row">
+                            <div class="col-12 col-md-4 mb-big">
+                                <h3 class="text-medium text-gray">Border top + border bottom</h3>
+                                <div class="container section border-top border-bottom"><br></div>
                             </div>
-                        </div>
-
-                        <div class="col-12 col-md-6">
-                            <label class="label" for="test11">Name</label>
-                            <div class="input has-error input-fullWidth">
-                                <input id="test11" placeholder="Name" type="text" />
+                            <div class="col-12 col-md-4 mb-big">
+                                <h3 class="text-medium text-gray">Border right + border left</h3>
+                                <div class="container section border-right border-left"><br></div>
                             </div>
-                            <p class="text-error text-small">$error message</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <label class="label" for="test12">Address</label>
-                            <div class="input input-fullWidth">
-                                <input id="test12" placeholder="Address" type="text" />
+                            <div class="col-12 col-md-4 mb-big">
+                                <h3 class="text-medium text-gray">Bordered</h3>
+                                <div class="container section border"><br></div>
                             </div>
-                        </div>
-
-                        <div class="col-12 col-md-6">
-                            <label class="label" for="test13">Address</label>
-                            <div class="input has-error input-fullWidth">
-                                <input id="test13" placeholder="Address" type="text" />
-                            </div>
-                            <p class="text-error text-small">$error message</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                       <div class="col-12 col-md-6">
-                            <label class="label" for="country-code">Country</label>
-                            <div class="select select-fullWidth">
-                                <select name="country-code" id="country-code">
-                                        <option>Afghanistan</option>
-                                        <option>Albania</option>
-                                        <option>Algeria</option>
-                                        <option>American Samoa</option>
-                                        <option>Andorra</option>
-                                        <option>Angola</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <label class="label" for="country-code-error">Country</label>
-                            <div class="select select-fullWidth has-error">
-                                <select name="country-code-error" id="country-code-error">
-                                        <option>Afghanistan</option>
-                                        <option>Albania</option>
-                                        <option>Algeria</option>
-                                        <option>American Samoa</option>
-                                        <option>Andorra</option>
-                                        <option>Angola</option>
-
-                                </select>
-                            </div>
-                             <p class="text-error text-small">$error message</p>
-                        </div>
-                    </div>
-                    <div class="row mb-big">
-                       <div class="col-12 col-md-6">
-                            <label class="label" for="message">Message</label>
-                            <div class="textarea">
-                              <textarea id="message"></textarea>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <label class="label" for="message-error">Message</label>
-                            <div class="textarea has-error">
-                              <textarea id="message-error"></textarea>
-                            </div>
-                            <p class="text-error text-small">$error message</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6 col-md-3">
-                            <div class="mb-big">
-                              <h3 class="text-medium text-gray">Radio buttons</h3>
-                              <div class="radio">
-                                 <input id="radio1" name="radio" type="radio" value=""/>
-                                 <label for="radio1" >Radio button 1</label>
-                              </div>
-                              <div class="radio">
-                                 <input id="radio2" name="radio" type="radio" value=""/>
-                                 <label for="radio2" >Radio button 2</label>
-                              </div>
-                              <div class="radio">
-                                 <input id="radio3" name="radio" type="radio" value=""/>
-                                 <label for="radio3" >Radio button 3</label>
-                              </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3 mb-big">
-                          <div class="">
-                            <h3 class="text-medium text-gray">Checkboxes</h3>
-                            <div class="checkbox">
-                               <input id="checkbox1" name="keywords" type="checkbox" value=""/>
-                               <label for="checkbox1">Checkbox 1</label>
-                            </div>
-                            <div class="checkbox">
-                               <input id="checkbox2" name="keywords" type="checkbox" value=""/>
-                               <label for="checkbox2">Checkbox 2</label>
-                            </div>
-                            <div class="checkbox">
-                               <input id="checkbox3" name="keywords" type="checkbox" value=""/>
-                               <label for="checkbox3">Checkbox 3</label>
-                            </div>
-                          </div>
-
-                        </div>
-                    </div>
-                    <h3 class="text-medium text-gray">Inputs with icons</h3>
-                    <div class="row mb-big">
-                      <div class="col-12 col-md-6">
-                        <div class="input input-withIcon input-fullWidth">
-                             <input id="test1" placeholder="Your name" type="text" />
-                             <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><path d="M257,474.1c-62.5,0-125,0-187.5,0c-17.9,0-29.6-11.2-29.9-29c-0.2-12.7-0.3-25.3,0.2-38c0.6-15,7.9-26.5,20.9-33.6   c42.7-23.3,85.6-46.1,128.3-69.3c3.1-1.7,5-0.1,7.3,1.1c36.5,19.1,73.7,20.7,111.7,4.8c1.1-0.4,2.3-0.7,3.2-1.5   c7.9-6.7,15-4,23.2,0.5c38.3,21.1,76.9,41.8,115.5,62.4c16.7,8.9,24.9,22.3,24.6,41.2c-0.2,10.7,0,21.3,0,32   c-0.1,17.7-11.9,29.4-29.5,29.4C382.3,474.1,319.6,474.1,257,474.1z"/><path d="M253.9,295.2c-35.2-1.2-64.4-18.6-85.9-49.5C132.8,195,137,123,177.3,76.8c43.8-50.1,116.4-49.8,159.8,0.6   c46.1,53.6,43.2,138.2-6.7,186.8C310,284.1,285.6,294.8,253.9,295.2z"/></g></svg>
-                         </div>
-                        <div class="input input-withIcon input-fullWidth">
-                          <input id="test2" placeholder="Search" type="text" />
-                          <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 55 55" style="enable-background:new 0 0 55 55;" xml:space="preserve"><path d="M51.9599609,23.9699707l-4.8499756-2.5199585C46.7399902,20.2299805,46.25,19.039978,45.6599731,17.9199829  l1.6400146-5.210022c0.1099854-0.3499756,0.0100098-0.7399902-0.25-1L43.289978,7.9500122  c-0.2600098-0.2600098-0.6500244-0.3600464-1-0.25l-5.210022,1.6399536C35.9599609,8.75,34.7699585,8.2600098,33.5499878,7.8900146  L31.0299683,3.039978C30.8599854,2.7099609,30.5099487,2.5,30.1399536,2.5h-5.2999878  c-0.3699951,0-0.7099609,0.2099609-0.8800049,0.539978l-2.5299683,4.8500366  C20.2099609,8.2600098,19.0299683,8.75,17.8999634,9.3399658l-5.2000122-1.6399536  c-0.3599854-0.1100464-0.75-0.0100098-1.0099487,0.25l-3.7400513,3.7599487c-0.2599487,0.2600098-0.3599854,0.6500244-0.25,1  l1.6400146,5.210022C8.75,19.039978,8.2599487,20.2299805,7.8899536,21.4500122L3.039978,23.9699707  C2.7099609,24.1400146,2.5,24.4899902,2.5,24.8599854v5.2999878c0,0.3699951,0.2099609,0.710022,0.539978,0.8800049  l4.8499756,2.5300293C8.2599487,34.7799683,8.75,35.9699707,9.3399658,37.0999756l-1.6400146,5.2000122  c-0.1099854,0.3599854-0.0099487,0.7399902,0.25,1.0100098l3.7400513,3.7399902  c0.2699585,0.2600098,0.6499634,0.3599854,1.0099487,0.25l5.1900024-1.6400146  c1.1300049,0.6000366,2.3300171,1.0900269,3.5599976,1.4700317l2.5100098,4.8299561  C24.1300049,52.289978,24.4699707,52.5,24.8399658,52.5h5.2999878c0.3699951,0,0.7200317-0.210022,0.8900146-0.5400391  l2.5100098-4.8299561c1.2299805-0.3800049,2.4199829-0.8699951,3.5599976-1.4700317l5.1900024,1.6400146  c0.3499756,0.1099854,0.7399902,0.0100098,1-0.25l3.7600098-3.7399902c0.2600098-0.2700195,0.3599854-0.6500244,0.25-1.0100098  l-1.6400146-5.2000122c0.5900269-1.1300049,1.0800171-2.3200073,1.4500122-3.5299683l4.8499756-2.5300293  C52.289978,30.8699951,52.5,30.5299683,52.5,30.1599731v-5.2999878C52.5,24.4899902,52.289978,24.1400146,51.9599609,23.9699707z   M27.5,37.9400024c-5.7600098,0-10.4400024-4.6799927-10.4400024-10.4400024c0-5.75,4.6799927-10.4299927,10.4400024-10.4299927  c5.75,0,10.4299927,4.6799927,10.4299927,10.4299927C37.9299927,33.2600098,33.25,37.9400024,27.5,37.9400024z"/></svg>
-                        </div>
-                        <div class="input input-withIcon input-fullWidth">
-                          <input id="test3" placeholder="Search" type="text" />
-                          <svg class="input-icon" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"  version="1.1" x="0px" y="0px" viewBox="0 0 100 100"><g transform="translate(0,-952.36218)"><path style="text-indent:0;text-transform:none;direction:ltr;block-progression:tb;baseline-shift:baseline;color:#000000;enable-background:accumulate;" d="M 43.0018,963.36218 C 25.3871,963.36218 11,977.74333 11,995.35117 c 0,17.60773 14.387,31.98903 32.0018,31.98903 7.0044,0 13.5002,-2.2762 18.7822,-6.1229 l 18.6886,18.681 c 1.9524,1.9518 5.1103,1.9519 7.0628,0 1.9528,-1.9518 1.9528,-5.1394 0,-7.0912 l -18.6572,-18.6499 c 3.8572,-5.2836 6.1253,-11.7953 6.1253,-18.80603 0,-17.60784 -14.3871,-31.98899 -32.0017,-31.98899 z m 0,9.99656 c 12.2099,0 22.0012,9.78723 22.0012,21.99243 0,12.20513 -9.7914,21.99243 -22.0012,21.99243 -12.2099,0 -22.0013,-9.7873 -22.0013,-21.99243 0,-12.2052 9.7913,-21.99243 22.0013,-21.99243 z" fill-opacity="1" stroke="none" marker="none" visibility="visible" display="inline" overflow="visible"/></g></svg>
-
-                        </div>
                       </div>
-                      <div class="col-12 col-md-6">
-                        <div class="input input-withIcon input-fullWidth">
-                          <input id="test4" placeholder="Date" type="text" />
-                          <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><symbol viewBox="-27.299 -39.024 54.598 78.047"><path fill="none" d="M11.157,34.02c-1.275-1.85-3.408-3.026-5.733-3.026c-2.13,0-4.118,0.985-5.424,2.607   c-1.306-1.622-3.294-2.607-5.423-2.607c-2.325,0-4.457,1.176-5.734,3.026c-1.275-1.85-3.408-3.026-5.733-3.026   c-1.913,0-3.648,0.776-4.908,2.029v-66.474c1.26,1.253,2.995,2.029,4.908,2.029c2.325,0,4.458-1.176,5.733-3.026   c1.277,1.85,3.409,3.026,5.734,3.026c2.129,0,4.117-0.986,5.423-2.607c1.306,1.622,3.294,2.607,5.424,2.607   c2.325,0,4.458-1.176,5.733-3.026c1.277,1.85,3.409,3.026,5.734,3.026c1.913,0,3.647-0.776,4.907-2.028v66.473   c-1.26-1.253-2.994-2.028-4.907-2.028C14.567,30.995,12.435,32.17,11.157,34.02z"/><path stroke-width="3" stroke-miterlimit="10" d="M-20.463-37.524   c0.391,1.615,1.839,2.822,3.573,2.822c1.733,0,3.181-1.207,3.572-2.822h4.323c0.391,1.615,1.839,2.822,3.573,2.822   s3.182-1.207,3.573-2.822h3.701c0.391,1.615,1.839,2.822,3.573,2.822s3.182-1.207,3.573-2.822h4.322   c0.391,1.615,1.839,2.822,3.573,2.822s3.182-1.207,3.573-2.822h5.335v75.047h-5.266c-0.219-1.825-1.759-3.25-3.641-3.25   s-3.423,1.425-3.641,3.25H9.065c-0.219-1.825-1.759-3.25-3.641-3.25s-3.423,1.425-3.641,3.25h-3.564   c-0.219-1.825-1.759-3.25-3.641-3.25s-3.423,1.425-3.641,3.25h-4.186c-0.219-1.825-1.758-3.25-3.641-3.25   c-1.883,0-3.423,1.425-3.641,3.25h-5.267v-75.047H-20.463z"/></symbol><symbol viewBox="-30.282 -48.056 60.563 94.113"><path fill="#000000" stroke="#000000" stroke-width="6" stroke-miterlimit="10" d="M16.006,43.056   c-3.233-4.883-8.77-8.108-15.065-8.108s-11.832,3.225-15.065,8.108h-10.584v-88.113h10.584c3.233,4.883,8.77,8.108,15.065,8.108   s11.832-3.224,15.065-8.108H26.59v88.113H16.006z"/><line fill="none" stroke="#000000" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="7,8" x1="27.781" y1="-20.755" x2="-27.782" y2="-20.755"/></symbol><symbol viewBox="-24.712 -42.834 54.356 85.667"><path fill="#000000" stroke="#000000" stroke-width="5" stroke-miterlimit="10" d="M17.181,40.333h-4.475   c-0.466-2.355-2.539-4.131-5.031-4.131c-2.491,0-4.565,1.776-5.03,4.131h-4.883c-0.466-2.355-2.539-4.131-5.031-4.131   c-2.491,0-4.565,1.776-5.03,4.131h-4.883c-0.466-2.355-2.539-4.131-5.03-4.131v-72.023c2.622,0,4.76-1.974,5.069-4.512h4.806   c0.309,2.539,2.447,4.512,5.069,4.512c2.622,0,4.76-1.974,5.069-4.512h4.806c0.309,2.539,2.447,4.512,5.069,4.512   c2.622,0,4.76-1.974,5.069-4.512h4.398c0.309,2.539,2.447,4.512,5.069,4.512v72.023C19.72,36.202,17.647,37.978,17.181,40.333z"/><line fill="none" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="7,6" x1="-22.644" y1="-17.395" x2="27.644" y2="-17.395"/></symbol><symbol viewBox="-23.971 -42.094 47.944 84.188"><g><path fill="#000000" stroke="#000000" stroke-width="3.521" stroke-miterlimit="10" d="M17.182,40.333h-4.475    c-0.466-2.355-2.539-4.131-5.031-4.131c-2.491,0-4.565,1.776-5.03,4.131h-4.883c-0.466-2.355-2.539-4.131-5.031-4.131    c-2.491,0-4.565,1.776-5.03,4.131h-4.883c-0.466-2.355-2.539-4.131-5.03-4.131v-72.023c2.622,0,4.76-1.974,5.069-4.512h4.806    c0.309,2.539,2.447,4.512,5.069,4.512c2.622,0,4.76-1.974,5.069-4.512h4.806c0.309,2.539,2.447,4.512,5.069,4.512    c2.622,0,4.76-1.974,5.069-4.512h4.398c0.309,2.539,2.447,4.512,5.069,4.512v72.023C19.721,36.202,17.648,37.978,17.182,40.333z"/></g><polygon fill="#000000" stroke="#000000" stroke-width="3.8113" stroke-miterlimit="10" points="5.14,17.02 11.952,13.853    8.431,7.217 7.524,-0.241 0.124,1.057 -7.248,-0.385 -8.301,7.053 -11.951,13.62 -5.201,16.919 -0.084,22.42  "/></symbol><symbol id="a" viewBox="-21.087 -31.266 42.17 72.87"><path fill="#000000" stroke="#000000" stroke-width="5" stroke-miterlimit="10" d="M6.373,39.104h5.21c0-3.87,3.13-7,7-7v-53.87   c-3.87,0-7-3.14-7-7h-5.21"/><path fill="#000000" stroke="#000000" stroke-width="5" stroke-miterlimit="10" d="M-6.377-28.766h-5.21c0,3.86-3.13,7-7,7v53.87   c3.87,0,7,3.13,7,7h5.21"/><line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="2.373" y1="39.104" x2="-2.377" y2="39.104"/><line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="2.373" y1="-28.766" x2="-2.377" y2="-28.766"/><g><path stroke="#000000" stroke-width="0.9" stroke-miterlimit="10" d="M-9.901-10.118c0-0.994-0.806-1.8-1.8-1.8    s-1.8,0.806-1.8,1.8s0.806,1.8,1.8,1.8S-9.901-9.124-9.901-10.118z"/><path stroke="#000000" stroke-width="0.9" stroke-miterlimit="10" d="M-2.101-10.118c0-0.994-0.806-1.8-1.8-1.8    s-1.8,0.806-1.8,1.8s0.806,1.8,1.8,1.8S-2.101-9.124-2.101-10.118z"/><path stroke="#000000" stroke-width="0.9" stroke-miterlimit="10" d="M5.699-10.118c0-0.994-0.806-1.8-1.8-1.8s-1.8,0.806-1.8,1.8    s0.806,1.8,1.8,1.8S5.699-9.124,5.699-10.118z"/><path stroke="#000000" stroke-width="0.9" stroke-miterlimit="10" d="M13.499-10.118c0-0.994-0.806-1.8-1.8-1.8    s-1.8,0.806-1.8,1.8s0.806,1.8,1.8,1.8S13.499-9.124,13.499-10.118z"/></g></symbol><symbol viewBox="-21.086 -31.266 42.17 72.87"><use xlink:href="#a" width="42.17" height="72.87" x="-21.087" y="-31.266" transform="matrix(1 0 0 1 6.996482e-004 -2.671033e-004)" overflow="visible"/><line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="9.224" y1="13.75" x2="-9.223" y2="13.75"/></symbol><g display="none"><path display="inline" fill="#000000" d="M948.792,1194.743H-289.006c-2.084,0-3.789-1.705-3.789-3.789V3.789   c0-2.084,1.705-3.789,3.789-3.789H948.792c2.084,0,3.789,1.705,3.789,3.789v1187.164   C952.582,1193.038,950.877,1194.743,948.792,1194.743z"/></g><g><g><path fill="none" d="M16.728,88.786h66.544c2.539,0,4.604-2.065,4.604-4.604V37.94H12.124v46.241    C12.124,86.72,14.189,88.786,16.728,88.786z M67.638,43.906h12.969v10.375H67.638V43.906z M67.638,57.394h12.969V67.77H67.638    V57.394z M67.638,70.883h12.969v10.375H67.638V70.883z M51.556,43.906h12.969v10.375H51.556V43.906z M51.556,57.394h12.969V67.77    H51.556V57.394z M51.556,70.883h12.969v10.375H51.556V70.883z M35.474,43.906h12.969v10.375H35.474V43.906z M35.474,57.394h12.969    V67.77H35.474V57.394z M35.474,70.883h12.969v10.375H35.474V70.883z M19.392,43.906h12.969v10.375H19.392V43.906z M19.392,57.394    h12.969V67.77H19.392V57.394z M19.392,70.883h12.969v10.375H19.392V70.883z"/><path d="M16.728,95h66.544c5.965,0,10.818-4.853,10.818-10.818V24.9c0-5.965-4.853-10.818-10.818-10.818H83.22v3.572v1.592    c0,3.721-3.026,6.747-6.747,6.747h-0.796c-3.721,0-6.747-3.026-6.747-6.747V17.19v-3.107H31.069v3.107v2.057    c0,3.721-3.026,6.747-6.747,6.747h-0.796c-3.72,0-6.747-3.026-6.747-6.747v-1.592v-3.572h-0.052    c-5.965,0-10.818,4.853-10.818,10.818v59.281C5.91,90.147,10.763,95,16.728,95z M12.124,37.94h75.752v46.241    c0,2.539-2.065,4.604-4.604,4.604H16.728c-2.539,0-4.604-2.065-4.604-4.604V37.94z"/><rect x="19.392" y="43.906" width="12.969" height="10.375"/><rect x="35.474" y="43.906" width="12.969" height="10.375"/><rect x="51.556" y="43.906" width="12.969" height="10.375"/><rect x="67.638" y="43.906" width="12.969" height="10.375"/><rect x="19.392" y="57.394" width="12.969" height="10.375"/><rect x="35.474" y="57.394" width="12.969" height="10.375"/><rect x="51.556" y="57.394" width="12.969" height="10.375"/><rect x="67.638" y="57.394" width="12.969" height="10.375"/><rect x="19.392" y="70.883" width="12.969" height="10.375"/><rect x="35.474" y="70.883" width="12.969" height="10.375"/><rect x="51.556" y="70.883" width="12.969" height="10.375"/><rect x="67.638" y="70.883" width="12.969" height="10.375"/><path d="M23.526,23.096h0.796c2.122,0,3.849-1.727,3.849-3.849V8.849C28.172,6.727,26.444,5,24.322,5h-0.796    c-2.122,0-3.849,1.727-3.849,3.849v10.398C19.678,21.369,21.404,23.096,23.526,23.096z"/><path d="M75.677,23.096h0.796c2.122,0,3.849-1.727,3.849-3.849V8.849C80.322,6.727,78.595,5,76.473,5h-0.796    c-2.122,0-3.849,1.727-3.849,3.849v10.398C71.828,21.369,73.555,23.096,75.677,23.096z"/></g></g></svg>
-                        </div>
-                        <div class="input input-withIcon input-fullWidth">
-                          <input id="test5" placeholder="Email" type="text" />
-                          <svg class="input-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"> <path d="M49.7,6h-0.2C24.9,6,5,25.9,5,50.5c0,0.1,0,0.1,0,0.2C5.1,75.1,25.6,95,50.7,95h1.6c3.1,0,5.6-2.5,5.6-5.6 c0-3.1-2.5-5.6-5.6-5.6h-1.6c-19,0-34.4-14.9-34.5-33.2C16,32.2,30.9,17.2,49.3,17.1c0.1,0,0.1,0,0.2,0h0.2 C68,17.2,82.9,32.7,82.9,51.7v12.8c0,3.1-2.5,5.6-5.6,5.6c-3.1,0-5.6-2.5-5.6-5.6V50.5c0-12.3-9.9-22.4-22.2-22.4 c-12.3,0-22.4,9.9-22.4,22.2c0,12.3,9.9,22.4,22.2,22.4c4.2,0,8.4-1.2,12-3.5c2.7,8.8,12,13.8,20.9,11c7-2.2,11.8-8.6,11.8-15.9 V51.7C94,26.6,74.1,6.1,49.7,6z M49.5,61.6c-6.1,0-11.1-5-11.1-11.1s5-11.1,11.1-11.1s11.1,5,11.1,11.1S55.6,61.6,49.5,61.6z"/></svg>
-                        </div>
-                        <div class="input input-withIcon input-fullWidth">
-                          <input id="test6" placeholder="Password" type="text" />
-                          <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" x="0px" y="0px"><g><path d="M21.87,100l-1.31-.32a11.38,11.38,0,0,1-9-11.21q-0.1-19.24,0-38.47A11.4,11.4,0,0,1,23.37,38.5q26.61,0,53.22,0a11.44,11.44,0,0,1,11.7,9.78,3.91,3.91,0,0,0,.18.55V89.65a5.76,5.76,0,0,0-.2.64,11.32,11.32,0,0,1-7.73,9.08c-0.78.29-1.62,0.43-2.43,0.63H21.87ZM46.11,76.62c0,1.3,0,2.6,0,3.91a3.89,3.89,0,1,0,7.78.14c0.05-2.57,0-5.14,0-7.71a1.56,1.56,0,0,1,.71-1.44,7.38,7.38,0,0,0,3-7.66A7.69,7.69,0,0,0,43.11,62c-1.46,2.8-1.11,6.54,1.36,8.61A4.64,4.64,0,0,1,46.11,75C46.08,75.51,46.11,76.06,46.11,76.62Z"/><path d="M51.75,0c2.13,0.39,4.31.62,6.4,1.19A23.21,23.21,0,0,1,72.22,11.91c3.5,5.73,4.61,12.08,4.69,18.68,0,1.27,0,2.53,0,3.89H65.43c0-.39,0-0.83,0-1.27a36.26,36.26,0,0,0-1-10.55C63.1,18,60.7,14,55.79,12.49c-5.66-1.79-11.16-1.54-15.87,2.6-2.83,2.49-4.16,5.88-4.75,9.5-0.38,2.33-.43,4.72-0.59,7.09-0.06.91,0,1.82,0,2.81H23.1c0-1.13,0-2.29,0-3.45,0-5.71.79-11.29,3.31-16.5,3.88-8,10.2-12.79,19-14.14L48.23,0h3.52Z"/></g></svg>
-                        </div>
-                      </div>
-
-                    </div>
-                    <h3 class="text-medium text-gray">Collapsed forms</h3>
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <div class="formCollapsed">
-                                <div class="input formCollapsed-item formCollapsed-itemPrimary">
-                                    <input id="test7" placeholder="Klingon search" type="text" />
-                                </div>
-                                <div class="select formCollapsed-item">
-                                    <select name="country-code" id="country-code">
-                                        <option>One</option>
-                                        <option>Two</option>
-                                        <option>Three</option>
-                                        <option>Four</option>
-                                    </select>
-                                </div>
-                                <button class="formCollapsed-item button button-primary">
-                                    Search
-                                </button>
-                            </div>
-
+                    </section>
+                    <section class="section">
+                        <div class="">
+                            <h2 class="text-big">Containers</h2>
+                            <h3 class="text-medium text-gray">Standard</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         </div>
 
-                        <div class="col-12 col-md-6">
-                            <div class="formCollapsed">
-                                <div class="input formCollapsed-item formCollapsed-itemPrimary">
-                                    <input id="test8" placeholder="Klingon search" type="text" />
-                                </div>
-                                <button class="formCollapsed-item button button-primary">
-                                  Search
-                                </button>
-                            </div>
+                        <div class="container-medium">
+                            <h3 class="text-medium text-gray">Medium</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <div class="formCollapsed">
-                                <div class="select formCollapsed-item formCollapsed-itemPrimary">
-                                    <select name="country-code" id="country-code">
-                                        <option>Vincent</option>
-                                        <option>Jules</option>
-                                        <option>Mia </option>
-                                        <option>Butch</option>
-                                        <option>Winston </option>
-                                    </select>
-                                </div>
-                                <div class="select formCollapsed-item formCollapsed-itemPrimary">
-                                    <select name="country-code" id="country-code">
-                                        <option>Mr. White</option>
-                                        <option>Mr. Orange</option>
-                                        <option>Mr. Pink</option>
-                                        <option>Mr. Blonde</option>
-                                        <option>Nice Guy</option>
-                                        <option>Mr. Brown</option>
-                                        <option>Marvin</option>
-                                        <option>Holdaway</option>
-                                        <option>Mr. Blue</option>
-                                    </select>
-                                </div>
-                                 <div class="select formCollapsed-item formCollapsed-itemPrimary">
-                                    <select name="country-code" id="country-code">
-                                        <option>Shaw </option>
-                                        <option>Kelly</option>
-                                        <option>Doyle </option>
-                                        <option>Lt. William</option>
-                                        <option>Singleton</option>
-                                        <option>Billie</option>
-                                    </select>
-                                </div>
-                            </div>
+
+                        <div class="container-small">
+                            <h3 class="text-medium text-gray">Small</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         </div>
-                    </div>
-                </section>
-
-                <section class="section">
-                    <h2 class="text-big">Tables</h2>
-                    <div class="row">
-                        <div class="col-12 col-md-6 mb-big">
-                            <h2 class="text-medium text-gray">Standard</h2>
-                            <table class="table">
-                                <thead>
-                                    <tr class="text-small text-left">
-                                        <th>Header 1</th>
-                                        <th>Header 2</th>
-                                        <th>Header 3</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Lemon</td>
-                                        <td>Orange</td>
-                                        <td>Kiwi</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Sugar</td>
-                                        <td>Salt</td>
-                                        <td>Pepper</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fork</td>
-                                        <td>Knife</td>
-                                        <td>Spoon</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Cup</td>
-                                        <td>Glass</td>
-                                        <td>Pitcher</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="col-12 col-md-6 mb-big">
-                            <h2 class="text-medium text-gray">Responsive</h2>
-                            <table class="table table--responsive">
-                                <tr class="text-small">
-                                    <th>First column</th>
-                                    <th>Second column</th>
-                                    <th>Third column</th>
-                                </tr>
-                                <tr>
-                                    <td data-th="First column">Blue</td>
-                                    <td data-th="Second column">One</td>
-                                    <td data-th="Third column">My life fades</td>
-                                </tr>
-                                <tr>
-                                    <td data-th="First column">Green</td>
-                                    <td data-th="Second column">Two</td>
-                                    <td data-th="Third column">When the world was powered by the black fuel... and the desert sprouted great cities of pipe and steel. </td>
-                                </tr>
-                                <tr>
-                                    <td data-th="First column">Yellow</td>
-                                    <td data-th="Second column">Three</td>
-                                    <td data-th="Third column">A whirlwind of looting, a firestorm of fear. Men began to feed on men. A whirlwind of looting, a firestorm of fear. Men began to feed on men. </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="">
-                    <div class="row">
-                        <div class="col-12 col-md-6 mb-big">
-                            <h2 class="text-big">Tabs</h2>
-                            <div class="tabs">
-                               <a href="#" title="Tab 1" class="tabs-item">Tab 1</a>
-                               <a href="#" title="Tab 2" class="tabs-item is-selected">Tab 2</a>
-                               <a href="#" title="Tab 3" class="tabs-item">Tab 3</a>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <h2 class="text-big">Tags</h2>
-                            <ul>
-                                <li class="tag">
-                                    <a href="#">fantasy</a>
-                                </li>
-                                <li class="tag">
-                                    <a href="#">fiction</a>
-                                </li>
-                                <li class="tag">
-                                    <a href="#">contemporary</a>
-                                </li>
-                                <li class="tag">
-                                    <a href="#">horror</a>
-                                </li>
-                                <li class="tag">
-                                    <a href="#">science-fiction</a>
-                                </li>
-                                <li class="tag">
-                                    <a href="#">thriller</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-                <section class="section">
-                    <h2 class="text-big">Paginator</h2>
-                    <ul class="paginator">
-                        <li class="paginator-item">
-                            <a href="#" class="paginator-itemLink"> <&nbsp; Prev </a>
-                        </li>
-                        <li class="paginator-item">
-                            <a href="#" class="paginator-itemLink">1</a>
-                        </li>
-                        <li class="paginator-item">
-                            <a href="#" class="paginator-itemLink is-active">2</a>
-                        </li>
-                        <li class="paginator-item">
-                            <a href="#" class="paginator-itemLink">3</a>
-                        </li>
-                        <li class="paginator-item">
-                            <a href="#" class="paginator-itemLink">Next &nbsp;>
-                            </a>
-                        </li>
-                    </ul>
-
-                </section>
-                 <section class="mb-big">
-                    <h2 class="text-big">Badges</h2>
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-
-                            <h2 class="text-medium text-gray">Sizes</h2>
-                            <ul class="">
-                                <li class="badge badge--small">
-                                    small badge
-                                </li>
-                                <li class="badge">
-                                    default badge
-                                </li>
-                                <li class="badge badge--big">
-                                    big badge
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <h2 class="text-medium text-gray">Colors</h2>
-                            <ul>
-                                <li class="badge">
-                                    default
-                                </li>
-                                <li class="badge badge--primary">
-                                    primary
-                                </li>
-                                <li class="badge badge--secondary">
-                                    secondary
-                                </li>
-                                <li class="badge badge--dark">
-                                    dark
-                                </li>
-                                <li class="badge badge--success">
-                                    success
-                                </li>
-                                <li class="badge badge--warning">
-                                    warning
-                                </li>
-                                <li class="badge badge--error">
-                                    error
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-
-
-                <section class="mb-big">
-                    <h2 class="text-big">Image modifiers</h2>
-                    <div class="row">
-                        <div class="col-12 col-md-6 mb-big">
-                            <h2 class="text-medium text-gray">Circle</h2>
-                            <div class="row">
-                                <div class="col-4">
-                                    <img class="rounded" src="img/img1.jpg" alt="Image 1" width="100%"/>
-                                </div>
-                                <div class="col-4">
-                                    <img class="rounded" src="img/img2.jpg" alt="Image 2" width="100%"/>
-                                </div>
-                                <div class="col-4">
-                                    <img class="rounded" src="img/img3.jpg" alt="Image 3" width="100%"/>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 mb-big">
-                            <h2 class="text-medium text-gray">Rounded corners</h2>
-                            <div class="row">
-                                <div class="col-4">
-                                    <img class="rounded-corners" src="img/img4.jpg" alt="Image 4" width="100%"/>
-                                </div>
-                                <div class="col-4">
-                                    <img class="rounded-corners" src="img/img5.jpg" alt="Image 5" width="100%"/>
-                                </div>
-                                <div class="col-4">
-                                    <img class="rounded-corners" src="img/img6.jpg" alt="Image 6" width="100%"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="">
-                  <h2 class="text-big">Aligners</h2>
-                    <div class="mb-big">
-                      <h3 class="text-medium text-gray">Space between</h3>
-                      <div class="container bg-dark">
-                          <div class="section">
-                              <div class="aligner aligner--spaceBetween">
-                                  <div><img class="example-image" src="img/img4.jpg" alt="Image 4" width="150"/></div>
-                                  <div><img class="example-image" src="img/img5.jpg" alt="Image 5" width="150"/></div>
-                              </div>
-                          </div>
-                      </div>
-                    </div>
-                    <div class="mb-big">
-                      <h3 class="text-medium text-gray">Space around</h3>
-                      <div class="container bg-dark">
-                          <div class="section">
-                              <div class="aligner aligner--spaceAround">
-                                  <div><img class="example-image" src="img/img6.jpg" alt="Image 6" width="150"/></div>
-                                  <div><img class="example-image" src="img/img5.jpg" alt="Image 5" width="150"/></div>
-                                  <div><img class="example-image" src="img/img1.jpg" alt="Image 1" width="150"/></div>
-                                  <div><img class="example-image" src="img/img2.jpg" alt="Image 2" width="150"/></div>
-                              </div>
-
-                          </div>
-                      </div>
-                    </div>
-                    <div class="mb-big row">
-                        <div class="col-12 col-md-6 mb-big">
-                            <h3 class="text-medium text-gray">Align start</h3>
-                            <div class="container bg-dark">
-                                <div class="section">
-                                    <div class="aligner aligner--contentStart">
-                                        <div><img class="example-image" src="img/img1.jpg" alt="Image 1" width="150"/></div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <h3 class="text-medium text-gray">Align end</h3>
-                            <div class="container bg-dark">
-                                <div class="section">
-                                    <div class="aligner aligner--contentEnd">
-                                        <div><img class="example-image" src="img/img3.jpg" alt="Image 3" width="150"/></div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mb-big row">
-                        <div class="col-12 col-md-4 mb-big">
-                            <h3 class="text-medium text-gray">Center vertical</h3>
-                            <div class="container bg-dark" >
-                                <div class="section">
-                                    <div class="aligner aligner--centerVertical" style="height:150px;">
-                                        <p class="text-white m-none">Lorem ipsum dolor sit amet</p>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4 mb-big">
-                            <h3 class="text-medium text-gray">Center vertical and horitzontal</h3>
-                            <div class="container bg-dark" >
-                                <div class="section">
-                                    <div class="aligner aligner--centerHoritzontal aligner--centerVertical" style="height:150px;">
-                                        <p class="text-white m-none">Lorem ipsum<br />dolor sit amet</p>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4">
-                            <h3 class="text-medium text-gray">Align to bottom</h3>
-                            <div class="container bg-dark" >
-                                <div class="section">
-                                    <div class="aligner" style="height:150px;">
-                                        <p class="text-white m-none aligner--itemBottom">Lorem ipsum dolor sit amet</p>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="section">
-                    <h2 class="text-big">Low opacity</h2>
-                    <div class="container bg-dark">
-                        <div class="section">
-                            <div class="aligner aligner--centerHoritzontal aligner--centerVertical" style="height:150px;">
-                                <img class="opacity-low" src="img/img1.jpg" alt="Image 1" width="150"/>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </section>
-                 <section class="section">
-                    <h2 class="text-big">Loaders</h2>
-                    <div>
-                        <a href="#" class="js-show-hide-loading-bar button button--mobileFull" title="Start / stop loader">Show loading bar</a>
-                        <a href="#" class="js-show-hide-loading-spinner button button--secondary button--mobileFull" title="Start / stop loader">Show loading spinner</a>
-                    </div>
-                </section>
-                <section class="">
-                    <div class="mb-big">
-                      <h2 class="text-big">Customizable colors</h2>
-                      <h3 class="text-medium text-gray">Brand ( primary / secondary )</h3>
-                      <div class="aligner aligner--spaceAround">
-                          <div class="flex-grow bg-primary"><br><br></div>
-                          <div class="flex-grow bg-secondary"><br><br></div>
-                      </div>
-                    </div>
-                    <div class="mb-big">
-                      <h3 class="text-medium text-gray">Success / info / error / warning</h3>
-                      <div class="aligner aligner--spaceAround">
-                          <div class="flex-grow bg-success"><br><br></div>
-                          <div class="flex-grow bg-info"><br><br></div>
-                          <div class="flex-grow bg-warning"><br><br></div>
-                          <div class="flex-grow bg-error"><br><br></div>
-                      </div>
-                    </div>
-                    <div class="mb-big">
-                      <h3 class="text-medium text-gray">Others</h3>
-                      <div class="aligner aligner--spaceAround">
-                          <div class="flex-grow bg-white"><br><br></div>
-                          <div class="flex-grow bg-gray-light"><br><br></div>
-                          <div class="flex-grow bg-gray"><br><br></div>
-                          <div class="flex-grow bg-dark"><br><br></div>
-                      </div>
-                    </div>
-                </section>
-
-            </div>
-
-            <div class="section">
-                <div class="container">
-                    <h2 class="text-big">Full width bars</h2>
-                </div>
-                <div class="section bg-dark">
-                    <div class="container text-center">
-                        <h3 class="text-huge text-white text-withSubtitle">We can be heroes</h3>
-                        <h4 class="text-big text-gray">just for one day</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="container section">
-                <section>
-                    <h2 class="text-big">Notifications</h2>
-                    <div class="notification notification--success"><p>Success</p></div>
-                    <div class="notification notification--info"><p>Info</p></div>
-                    <div class="notification notification--warning"><p>Warning</p></div>
-                    <div class="notification notification--error"><p>Error</p></div>
-                </section>
-            </div>
-
-            <section class="section">
-                <div class="container">
-                    <h2 class="text-big">Containers</h2>
-                    <h3 class="text-medium text-gray">Standard</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-
-                <div class="container-medium">
-                    <h3 class="text-medium text-gray">Medium</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-
-                <div class="container-small">
-                    <h3 class="text-medium text-gray">Small</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-            </section>
-            <div class="container">
-                <section class="">
-                    <h2 class="text-big">Borders</h2>
-                    <div class="row">
-                        <div class="col-12 col-md-4 mb-big">
-                            <h3 class="text-medium text-gray">Border top + border bottom</h3>
-                            <div class="container section border-top border-bottom"><br></div>
-                        </div>
-                        <div class="col-12 col-md-4 mb-big">
-                            <h3 class="text-medium text-gray">Border right + border left</h3>
-                            <div class="container section border-right border-left"><br></div>
-                        </div>
-                        <div class="col-12 col-md-4 mb-big">
-                            <h3 class="text-medium text-gray">Bordered</h3>
-                            <div class="container section border"><br></div>
-                        </div>
-                    </div>
-                </section>
-
-
-                <section class="section">
-                    <!-- <h2 class="text-big">To be done in next releases</h2>
-                    <pre><code class="language-css">- Fix bootstrap library updates
-- Include code snippets on demo website (low prio)
-- BEM naming convention (V2)
-</code></pre> -->
-
+                    </section>
                     <h2 class="text-big">Latest changes</h2>
-                    <pre><code class="language-css">/* 19/10/2018 */ - Launch V3: Refactor all components and variables.
+                    <pre><code class="language-js">/* 21/10/2018 */ - Add outline button type
+/* 21/10/2018 */ - Define default variables as a light theme
+/* 19/10/2018 */ - Launch V3: Refactor all components and variables
 /* 20/04/2018 */ - Start V3 major update
 /* 20/04/2018 */ - We are back in town
 /* 05/05/2016 */ - Fix Badge Color Warning (#34)
@@ -947,7 +845,7 @@
 /* 16/12/2015 */ - Remove other projects selectors from buttons.scss file
 </code></pre>
                 </section>
-            </div>
+
 
         </main>
         <footer class="bg-dark">
@@ -955,7 +853,7 @@
                 <div class="section text-center text-small">
                     <p class="text-white">
                         <img src="img/logo.png" alt="sierra logo" width="100"/><br>
-                        Built with: Sierra SCSS library <br><span class="text-small text-gray">v3.0.0</span>
+                        Built with &nbsp; ❤ &nbsp; and Sierra SCSS library <br><span class="text-small text-gray">v3.0.4</span>
                     </p>
 
                     <p class="text-gray"><a href="https://github.com/sierra-library/sierra">Sierra Github</a> &nbsp;&nbsp;|&nbsp;&nbsp;
@@ -965,24 +863,11 @@
         </footer>
 
 		<!-- GitHub Corner -->
-	    <a href="https://github.com/sierra-library/sierra" target="_blank" class="github-corner"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#1abc9c; color:#2c3e50; position: fixed; top: 0; border: 0; right: 0;"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+	    <a href="https://github.com/sierra-library/sierra" target="_blank" class="github-corner"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#1abc9c; color:#ffffff; position: fixed; top: 0; border: 0; right: 0;"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
     </body>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
-	<script src="js/demo.js"></script>
-
-    <!-- Analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-71275974-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+    	<script src="js/demo.js"></script>
 
 </html>

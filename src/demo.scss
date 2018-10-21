@@ -48,6 +48,12 @@ code[class*=language-], pre[class*=language-] {
 }
 
 
+.language-js {
+  background-color: $c-gray-light;
+  display: inline-block;
+  padding: 10px;
+}
+
 
 @media screen and (max-width: 550px) {
   .example-image {
