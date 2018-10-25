@@ -10,18 +10,6 @@
   }
 }
 
-// code
-.language-js {
-  background-color: $c-gray-light;
-  display: inline-block;
-  padding: 10px;
-}
-
-pre {
-  margin-bottom: 2em !important;
-  overflow-x: auto;
-}
-
 // Alignment example images
 @media screen and (max-width: 550px) {
   .example-image {
@@ -54,4 +42,43 @@ pre {
   .example2 img, {
     width: 100% !important;
   }
+}
+
+
+// code
+.language-js {
+  background-color: $c-gray-light;
+  display: inline-block;
+  padding: 10px;
+}
+
+pre {
+  margin-bottom: 2em !important;
+  overflow-x: auto;
+}
+
+.example-code {
+  max-width: 700px;
+}
+
+.example-code pre[class*="language-"] {
+  font-size: 14px;
+  margin: 0 !important;
+}
+
+.token.tag {
+  background-color: transparent;
+  border-radius: 0;
+  color: #905;
+  line-height: auto;
+  margin: 0;
+  padding: 0;
+
+  &:before,
+  &:after {
+    display: none;
+  }
+}
+.token.operator {
+  background: none !important;
 }

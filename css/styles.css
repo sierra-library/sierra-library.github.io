@@ -231,7 +231,7 @@ li {
   opacity: .5; }
 
 .rounded-corners {
-  border-radius: 15%; }
+  border-radius: 5px; }
 
 .rounded {
   border-radius: 100%; }
@@ -1943,15 +1943,6 @@ input:-webkit-autofill {
     .main-logo {
       max-width: 200px; } }
 
-.language-js {
-  background-color: #eceff1;
-  display: inline-block;
-  padding: 10px; }
-
-pre {
-  margin-bottom: 2em !important;
-  overflow-x: auto; }
-
 @media screen and (max-width: 550px) {
   .example-image {
     width: 50px; } }
@@ -1974,3 +1965,32 @@ pre {
   .example1 img,
   .example2 img {
     width: 100% !important; } }
+
+.language-js {
+  background-color: #eceff1;
+  display: inline-block;
+  padding: 10px; }
+
+pre {
+  margin-bottom: 2em !important;
+  overflow-x: auto; }
+
+.example-code {
+  max-width: 700px; }
+
+.example-code pre[class*="language-"] {
+  font-size: 14px;
+  margin: 0 !important; }
+
+.token.tag {
+  background-color: transparent;
+  border-radius: 0;
+  color: #905;
+  line-height: auto;
+  margin: 0;
+  padding: 0; }
+  .token.tag:before, .token.tag:after {
+    display: none; }
+
+.token.operator {
+  background: none !important; }
