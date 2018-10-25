@@ -3,9 +3,17 @@
  * Javascript file for Penguin library demo
  **/
 
-
+ var waypoint = new Waypoint({
+   element: document.getElementById('js-header-waypoint'),
+   handler: function(direction) {
+     $('.js-header').toggleClass('is-visible')
+   }
+ })
 
 $(document).ready(function(){
+
+  $('code .loadingSpinner').removeAttr("style");
+  $('code .loadingBar').removeAttr("style");
 
     /**
      * Tabs

@@ -2,12 +2,23 @@
  * Demo website styles
  */
 
+body {
+  padding-top: 80px;
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -70px;
+  visibility: hidden;
+}
+
 // main logo
 .main-logo{
-  width: 250px;
   @include media-breakpoint-down(sm) {
-    max-width: 200px;
+    width: 100px;
   }
+  width: 150px;
 }
 
 // Alignment example images
@@ -81,4 +92,62 @@ pre {
 }
 .token.operator {
   background: none !important;
+}
+
+
+// Header
+//
+$bgc-header: $c-white !default;
+$bxsh-header: $bxsh-medium !default;
+$p-header: $p-big 0 !default;
+$z-header: 2000 !default;
+
+.header {
+  background-color: $bgc-header;
+  box-shadow: $bxsh-header;
+  display: none;
+  left: 0;
+  padding: $p-header;
+  position: fixed;
+  right: 0;
+  top: -100%;
+  z-index: $z-header;
+  transition: top 1s;
+
+  &.is-visible {
+    top: 0;
+    display: block;
+  }
+
+  &-inner {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-logo {
+    align-items: center;
+    display: flex;
+
+    &Image {
+      margin-right: $m-small;
+    }
+  }
+
+  &-ghLogo {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  &-nav {
+    align-items: center;
+    display: flex;
+    margin: 0;
+
+    &Item {
+      margin: 0;
+      margin-left: $m-medium;
+    }
+  }
 }

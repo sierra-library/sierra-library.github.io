@@ -1937,11 +1937,20 @@ input:-webkit-autofill {
 /**
  * Demo website styles
  */
+body {
+  padding-top: 80px; }
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -70px;
+  visibility: hidden; }
+
 .main-logo {
-  width: 250px; }
+  width: 150px; }
   @media (max-width: 767px) {
     .main-logo {
-      max-width: 200px; } }
+      width: 100px; } }
 
 @media screen and (max-width: 550px) {
   .example-image {
@@ -1994,3 +2003,37 @@ pre {
 
 .token.operator {
   background: none !important; }
+
+.header {
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  display: none;
+  left: 0;
+  padding: 16px 0;
+  position: fixed;
+  right: 0;
+  top: -100%;
+  z-index: 2000;
+  transition: top 1s; }
+  .header.is-visible {
+    top: 0;
+    display: block; }
+  .header-inner {
+    align-items: center;
+    display: flex;
+    justify-content: space-between; }
+  .header-logo {
+    align-items: center;
+    display: flex; }
+    .header-logoImage {
+      margin-right: 8px; }
+  @media (max-width: 991px) {
+    .header-ghLogo {
+      display: none; } }
+  .header-nav {
+    align-items: center;
+    display: flex;
+    margin: 0; }
+    .header-navItem {
+      margin: 0;
+      margin-left: 16px; }
