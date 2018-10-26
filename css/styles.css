@@ -1976,9 +1976,12 @@ body {
     width: 100% !important; } }
 
 .language-js {
-  background-color: #eceff1;
+  background-color: #eceff1 !important;
   display: inline-block;
   padding: 10px; }
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+  background-color: #eceff1 !important; }
 
 pre {
   margin-bottom: 2em !important;

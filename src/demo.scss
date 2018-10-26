@@ -58,9 +58,12 @@ body {
 
 // code
 .language-js {
-  background-color: $c-gray-light;
+  background-color: $c-light !important;
   display: inline-block;
   padding: 10px;
+}
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+  background-color: $c-light !important;
 }
 
 pre {
