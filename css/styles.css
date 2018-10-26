@@ -1975,11 +1975,6 @@ body {
   .example2 img {
     width: 100% !important; } }
 
-.language-js {
-  background-color: #eceff1 !important;
-  display: inline-block;
-  padding: 10px; }
-
 :not(pre) > code[class*="language-"], pre[class*="language-"] {
   background-color: #eceff1 !important; }
 
