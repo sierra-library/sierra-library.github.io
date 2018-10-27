@@ -149,9 +149,9 @@ $z-header: 2000 !default;
       bottom: 0;
       content: '';
       position: absolute;
-      right: -15px;
+      right: -12px;
       top: 0;
-      width: 15px;
+      width: 12px;
     }
 
     &Image {
@@ -183,7 +183,7 @@ $z-header: 2000 !default;
     margin: 0;
     margin-right: -12px;
     overflow-x: scroll;
-    padding: 20px $p-big;
+    padding: 20px $p-big 20px $p-medium;
     white-space: nowrap;
 
     &Item {

@@ -2039,9 +2039,9 @@ pre {
       bottom: 0;
       content: '';
       position: absolute;
-      right: -15px;
+      right: -12px;
       top: 0;
-      width: 15px; }
+      width: 12px; }
     .header-logoImage {
       margin-right: 8px; }
       @media (min-width: 576px) {
@@ -2060,7 +2060,7 @@ pre {
     margin: 0;
     margin-right: -12px;
     overflow-x: scroll;
-    padding: 20px 16px;
+    padding: 20px 16px 20px 8px;
     white-space: nowrap; }
     @media (min-width: 576px) {
       .header-nav {
