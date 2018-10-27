@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sierra: The smallest and lightest SCSS library</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+        <link rel="shortcut icon" href="ico.ico">
+
+        <!-- Sierra library CSS stylesheets -->
+        <link rel="stylesheet" type="text/css" media="all" href="css/styles.min.css">
+        <link rel="stylesheet" type="text/css" media="all" href="css/prism.css">
+
+        <!-- DEMO Font -->
+        <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Lato:400,700,300' type='text/css'>
+
+    </head>
+    <body>
+        <main>
+          <header class="header js-header">
+            <div class="header-inner container">
+              <a href="#" class="header-logo text-dark">
+                <img class="header-logoImage" src="img/sierra.svg" alt="Sierra logo" width="40"/>
+                <span class="hide-small">Sierra</span>
+              </a>
+              <ul class="header-nav">
+                <li class="header-navItem"><a class="text-dark" href="#install">Get started</a></li>
+                <li class="header-navItem"><a class="text-dark" href="#components">Components</a></li>
+                <li class="header-navItem"><a class="text-dark" href="#utilities">Utilities</a></li>
+                <li class="header-navItem"><a class="text-dark" href="#download">Download</a></li>
+                <li class="header-navItem header-github"><a href="https://github.com/sierra-library/sierra/"><img src="img/gh.svg" class="header-githubImage" alt="Github" width="30"/></a></li>
+              </ul>
+            </div>
+          </header>
+            <div class="container">
+                <section class="mb-big">
+                    <div class="text-center">
+                        <img class="main-logo mb-medium" src="img/sierra.svg" alt="Sierra logo" />
+                        <div>
+                            <h1 class="text-huge text-withSubtitle">Sierra SCSS Library</h1>
+                            <h2 class="text-big text-gray">The smallest and lightest SCSS library</h2>
+                            <p id="js-header-waypoint" class="m-none">
+                              <a class="button button--primary button--mobileFull" href="#install">Get started</a> or <a class="button button--outlined button--mobileFull" href="https://github.com/sierra-library/sierra/archive/master.zip">Download</a>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- Full size -->
+            <div class="bg-dark">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-12 col-sm-4">
+                            <div class="section">
+                              <img width="118" src="img/lightweight.png" alt="Lightweight" /> <br>
+                              <h2 class="text-withSubtitle text-big text-white">Lightweight <br>
+                                <span class="text-medium text-gray">37 kB (8.9 kB gzipped).</span></h2>
+                            </div>
+                          </div>
+
+                        <div class="col-12 col-sm-4">
+                          <div class="section">
+                            <img width="118" src="img/customizable.png" alt="Customizable" /> <br>
+                            <h2 class="text-withSubtitle text-big text-white">Customizable<br>
+                              <span class="text-medium text-gray">Fonts, colors, sizes...</span>
+                            </h2>
+                          </div>
+                        </div>
+                        <div class="col-12 col-sm-4">
+                          <div class="section">
+                            <h2 class="text-withSubtitle text-big text-white">
+                                <img width="118" src="img/opensource.png" alt="Open Source" /> <br>
+                                Open Source <br>
+
+                                <span class="text-medium text-gray">To nerds, by nerds.</span>
+                            </h2>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="anchor" name="install"></a>
+            <!-- Install -->
+            <div class="container section">
+              <h2 class="text-huge">Quick install</h2>
+              <h3 class="text-medium">1.- Get the files via NPM</h3>
+              <pre><code class="language-js">npm install sierra-library --save-dev</code></pre>
+              <h3 class="text-medium">2.- Import the library from your SCSS files</h3>
+              <pre><code class="language-js">@import 'sierra-library/lib/index';</code></pre>
+              <h3 class="text-medium">3.- Ready to compile!</h3>
+              <p>Need help about that? take a look at our <a href="https://sierra-library.github.io/examples/example1/index.html">example page</a> and  <a href="https://github.com/sierra-library/sierra-library.github.io/tree/master/examples/example1">it's code</a>. </p>
+            </div>
+            <a class="anchor" name="download"></a>
+            <!-- Download -->
+            <div class="container section">
+              <h2 class="text-huge">Download</h2>
+              <p>Download ready-to-use <a href="http://sierra-library.github.io/css/styles.css">compiled CSS</a> or <a href="http://sierra-library.github.io/css/styles.min.css">minified CSS</a> files.
+              </p>
+              <p class="mb-none">Otherwise you can compile Sierra Library with your own tools by downloading our <a href="https://github.com/sierra-library/sierra/archive/master.zip">source SCSS</a> files.</p>
+
+            </div>
+            <!-- Customization -->
+            <div class="container section">
+              <h2 class="text-huge">Theme customization</h3>
+              <p>If you want to customize Sierra library's theme settings, including fonts, margins, paddings and/or colors, create your own custom-settings file and add it just before importing Sierra files:</p>
+              <pre><code class="language-js">@import 'custom-settings';
+@import 'sierra-library/lib/index';</code></pre>
+              <p>This custom-settings.scss file should contain all those <a href="https://github.com/sierra-library/sierra-library.github.io/blob/master/examples/example1/scss/custom-settings.scss">SCSS variables</a> you want to overwrite. Check all settings you can customize in the <a href="https://github.com/sierra-library/sierra/blob/master/src/_settings.scss">settings library file</a>.</p>
+              <p>However, we recommend to duplicate all variables in order to make sure your styles are not being compromised in eventual library updates.</p>
+              <p><strong>Having troubles?</strong> take a look at this theme customization examples:</p>
+
+              <div class="examples">
+                <div class="mb-big example1">
+                  <a href="https://sierra-library.github.io/examples/example1/index.html">
+                    <img src="img/example1.jpg" alt="example1" width="200"> <br>
+                  </a>
+                  <a href="https://sierra-library.github.io/examples/example1/index.html">View page
+                  </a>
+                  <span class="text-gray">or</span>
+                  <a href="https://github.com/sierra-library/sierra-library.github.io/tree/master/examples/example1">view code</a>
+                </div>
+                <div class="mb-big example2">
+                  <a href="https://sierra-library.github.io/examples/example2/index.html">
+                    <img src="img/example2.jpg" alt="example2" width="200"> <br>
+                  </a>
+                  <a href="https://sierra-library.github.io/examples/example2/index.html">
+                    View page
+                  </a>
+                  <span class="text-gray">or</span>
+                  <a href="https://github.com/sierra-library/sierra-library.github.io/tree/master/examples/example2">view code</a>
+                </div>
+              </div>
+              <a class="anchor" name="components"></a>
+            </div>
+            <!-- Components -->
+            <div class="container">
+              <h2 class="text-huge">Components</h3>
+                <section>
+                    <!-- Buttons -->
+                    <section>
+                      <h2 class="text-big">Buttons</h2>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom text-center">
+                          <button class="button button--primary m-none">Button</button>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><button class="button button--primary">Button</button></code></pre>
+                        </div>
+                      </div>
+                      <!-- Button colors -->
+                      <h2 class="text-medium text-gray">Button colors</h2>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom">
+                          <button class="button button--small button--primary">primary</button>
+                          <button class="button button--small button--secondary">secondary</button>
+                          <button class="button button--small button--green">green</button>
+                          <button class="button button--small button--red">red</button>
+                          <button class="button button--small button--outlined">outlined</button>
+                          <button class="button button--small button--transparent">transparent</button>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><button class="button button--small button--primary">primary</button>
+  <button class="button button--small button--secondary">secondary</button>
+  <button class="button button--small button--green">green</button>
+  <button class="button button--small button--red">red</button>
+  <button class="button button--small button--outlined">outlined</button>
+  <button class="button button--small button--transparent">transparent</button></code></pre>
+                        </div>
+                      </div>
+                      <!-- Button Mobile full -->
+                      <h2 class="text-medium text-gray">Mobile full size</h2>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom text-center">
+                          <button class="button button--primary button--mobileFull m-none">primary</button>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><button class="button button--primary button--mobileFull">Button</button></code></pre>
+                        </div>
+                      </div>
+                      <!-- Button sizes -->
+                      <h2 class="text-medium text-gray">Button sizes</h2>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom">
+                          <button class="button button--big">Button big</button>
+                          <button class="button button--medium">Button default</button>
+                          <button class="button button--small">Button small</button>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><button class="button button--big">Button big</button>
+  <button class="button">Button default</button>
+  <button class="button button--small">Button small</button></code></pre>
+                        </div>
+                      </div>
+                    </section>
+                    <!-- Notifications -->
+                    <section class="section">
+                      <h2 class="text-big">Notifications</h2>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom">
+                          <div class="notification notification--success"><p>Success message</p></div>
+                          <div class="notification notification--info"><p>Info message</p></div>
+                          <div class="notification notification--warning"><p>Warning message</p></div>
+                          <div class="notification notification--error"><p>Error message</p></div>
+                        </div>
+                        <div class="">
+                        <pre><code class="language-markup"><div class="notification notification--success"><p>Success message</p></div>
+<div class="notification notification--info"><p>Info message</p></div>
+<div class="notification notification--warning"><p>Warning message</p></div>
+<div class="notification notification--error"><p>Error message</p></div>
+</code></pre>
+                        </div>
+                      </div>
+                    </section>
+                    <!-- Loaders -->
+                    <section class="section">
+                       <h2 class="text-big">Loaders</h2>
+                       <h3 class="text-medium">Loading bar</h3>
+                       <p class="text-gray">By default it's fixed at the top of the page</p>
+                       <div class="example-code border rounded-corners mb-big">
+                         <div class="p-big border-bottom text-center">
+                           <div style="position:relative;" class="loadingBar"></div>
+                         </div>
+                         <div class="">
+                           <pre><code class="language-markup"><div class="loadingBar" style="display: none;"></div>
+</code></pre>
+                         </div>
+                       </div>
+                       <h3 class="text-medium">Loading spinner</h3>
+                       <p class="text-gray">By default it's located at the center of the page</p>
+                       <div class="example-code border rounded-corners mb-big">
+                         <div class="p-big border-bottom text-center">
+                           <br>
+                           <div class='loadingSpinner' style="position:relative;">
+                             <span class='loadingSpinner-inner'></span>
+                             <span class='loadingSpinner-inner'></span>
+                             <span class='loadingSpinner-inner'></span>
+                             <span class='loadingSpinner-inner'></span>
+                           </div>
+                         </div>
+                         <div class="">
+                           <pre><code class="language-markup"><div class='loadingSpinner' style="display: none;">
+  <span class='loadingSpinner-inner'></span>
+  <span class='loadingSpinner-inner'></span>
+  <span class='loadingSpinner-inner'></span>
+  <span class='loadingSpinner-inner'></span>
+</div></code></pre>
+                         </div>
+                       </div>
+                   </section>
+                   <!-- Pagination -->
+                    <section class="section">
+                       <h2 class="text-big">Pagination</h2>
+                       <div class="example-code border rounded-corners mb-big">
+                         <div class="p-big border-bottom">
+                           <ul class="paginator">
+                               <li class="paginator-item">
+                                   <a href="javascript:void(0)" class="paginator-itemLink"> <&nbsp; Prev </a>
+                               </li>
+                               <li class="paginator-item">
+                                   <a href="javascript:void(0)" class="paginator-itemLink">1</a>
+                               </li>
+                               <li class="paginator-item">
+                                   <a href="javascript:void(0)" class="paginator-itemLink is-active">2</a>
+                               </li>
+                               <li class="paginator-item">
+                                   <a href="javascript:void(0)" class="paginator-itemLink">Next &nbsp;>
+                                   </a>
+                               </li>
+                           </ul>
+                         </div>
+                         <div class="">
+                           <pre><code class="language-markup"><ul class="paginator">
+   <li class="paginator-item">
+       <a href="#" class="paginator-itemLink">Prev</a>
+   </li>
+   <li class="paginator-item">
+       <a href="#" class="paginator-itemLink">1</a>
+   </li>
+   <li class="paginator-item">
+       <a href="#" class="paginator-itemLink is-active">2</a>
+   </li>
+   <li class="paginator-item">
+       <a href="#" class="paginator-itemLink">Next</a>
+   </li>
+</ul></code></pre>
+                         </div>
+                       </div>
+                   </section>
+                   <!-- Tabs -->
+                   <section class="section">
+                     <h2 class="text-big">Tabs</h2>
+                     <div class="example-code border rounded-corners mb-big">
+                       <div class="p-big border-bottom">
+                         <div class="tabs">
+                            <a href="#" class="tabs-item js-tab">Tab 1</a>
+                            <a href="#" class="tabs-item is-selected js-tab">Tab 2</a>
+                            <a href="#" class="tabs-item js-tab">Tab 3</a>
+                         </div>
+                       </div>
+                       <div class="">
+                         <pre><code class="language-markup"><div class="tabs">
+  <a href="#" class="tabs-item">Tab 1</a>
+  <a href="#" class="tabs-item is-selected">Tab 2</a>
+  <a href="#" class="tabs-item">Tab 3</a>
+</div>
+</code></pre>
+                       </div>
+                   </section>
+                   <!-- Tags -->
+                   <section class="section">
+                     <h2 class="text-big">Tags</h2>
+                     <div class="example-code border rounded-corners mb-big">
+                       <div class="p-big border-bottom">
+                         <ul>
+                             <li class="tag">
+                                 <a href="javascript:void(0)">fantasy</a>
+                             </li>
+                             <li class="tag">
+                                 <a href="javascript:void(0)">fiction</a>
+                             </li>
+                             <li class="tag">
+                                 <a href="javascript:void(0)">contemporary</a>
+                             </li>
+                             <li class="tag">
+                                 <a href="javascript:void(0)">horror</a>
+                             </li>
+                         </ul>
+                       </div>
+                       <div class="">
+                         <pre><code class="language-markup"><ul>
+  <li class="tag">
+     <a href="#">fantasy</a>
+  </li>
+  <li class="tag">
+     <a href="#">fiction</a>
+  </li>
+  <li class="tag">
+     <a href="#">contemporary</a>
+  </li>
+  <li class="tag">
+     <a href="#">horror</a>
+  </li>
+</ul>
+</code></pre>
+                       </div>
+                   </section>
+                   <!-- Badges -->
+                   <section class="section">
+                      <h2 class="text-big">Badges</h2>
+                      <h3 class="text-medium text-gray">Colors</h3>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom">
+                          <ul>
+                              <li class="badge">
+                                  default
+                              </li>
+                              <li class="badge badge--primary">
+                                  primary
+                              </li>
+                              <li class="badge badge--secondary">
+                                  secondary
+                              </li>
+                              <li class="badge badge--dark">
+                                  dark
+                              </li>
+                              <li class="badge badge--success">
+                                  success
+                              </li>
+                              <li class="badge badge--warning">
+                                  warning
+                              </li>
+                              <li class="badge badge--error">
+                                  error
+                              </li>
+                          </ul>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><ul>
+  <li class="badge">default</li>
+  <li class="badge badge--primary">primary</li>
+  <li class="badge badge--secondary">secondary</li>
+  <li class="badge badge--dark">dark</li>
+  <li class="badge badge--success">success</li>
+  <li class="badge badge--warning">warning</li>
+  <li class="badge badge--error">error</li>
+</ul></code></pre>
+                        </div>
+                      </div>
+                      <h3 class="text-medium text-gray">Sizes</h3>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom">
+                          <ul class="">
+                              <li class="badge badge--small">
+                                  small badge
+                              </li>
+                              <li class="badge">
+                                  default badge
+                              </li>
+                              <li class="badge badge--big">
+                                  big badge
+                              </li>
+                          </ul>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><ul>
+  <li class="badge badge--small">small badge</li>
+  <li class="badge">default badge</li>
+  <li class="badge badge--big">big badge</li>
+</ul></code></pre>
+                        </div>
+                      </div>
+                  </section>
+              <!-- Forms -->
+               <section class="section">
+                 <h2 class="text-big">Forms</h2>
+                 <h3 class="text-medium text-gray">Input</h3>
+                 <div class="example-code border rounded-corners mb-big">
+                   <div class="p-big border-bottom">
+                     <label class="label" for="test10">Input</label>
+                     <div class="input input-fullWidth">
+                         <input id="test10" placeholder="Input" type="text" />
+                     </div>
+                   </div>
+                   <div class="">
+                     <pre><code class="language-markup"><label class="label" for="test10">Input</label>
+<div class="input input-fullWidth">
+  <input id="test10" placeholder="Input" type="text" />
+</div></pre></code>
+                   </div>
+                 </div>
+                 <h3 class="text-medium text-gray">Inputs with icon</h3>
+                 <div class="example-code border rounded-corners mb-big">
+                   <div class="p-big border-bottom">
+                     <label class="label" for="test10">Input</label>
+                     <div class="input input-withIcon input-fullWidth">
+                          <input id="test1" placeholder="Your name" type="text" />
+                          <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><path d="M257,474.1c-62.5,0-125,0-187.5,0c-17.9,0-29.6-11.2-29.9-29c-0.2-12.7-0.3-25.3,0.2-38c0.6-15,7.9-26.5,20.9-33.6   c42.7-23.3,85.6-46.1,128.3-69.3c3.1-1.7,5-0.1,7.3,1.1c36.5,19.1,73.7,20.7,111.7,4.8c1.1-0.4,2.3-0.7,3.2-1.5   c7.9-6.7,15-4,23.2,0.5c38.3,21.1,76.9,41.8,115.5,62.4c16.7,8.9,24.9,22.3,24.6,41.2c-0.2,10.7,0,21.3,0,32   c-0.1,17.7-11.9,29.4-29.5,29.4C382.3,474.1,319.6,474.1,257,474.1z"/><path d="M253.9,295.2c-35.2-1.2-64.4-18.6-85.9-49.5C132.8,195,137,123,177.3,76.8c43.8-50.1,116.4-49.8,159.8,0.6   c46.1,53.6,43.2,138.2-6.7,186.8C310,284.1,285.6,294.8,253.9,295.2z"/></g></svg>
+                      </div>
+                   </div>
+                   <div class="">
+                     <pre><code class="language-markup"><label class="label" for="test10">Input</label>
+<div class="input input-withIcon input-fullWidth">
+<input id="test1" placeholder="Your name" type="text" />
+<svg class="input-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><path d="M257,474.1c-62.5,0-125,0-187.5,0c-17.9,0-29.6-11.2-29.9-29c-0.2-12.7-0.3-25.3,0.2-38c0.6-15,7.9-26.5,20.9-33.6   c42.7-23.3,85.6-46.1,128.3-69.3c3.1-1.7,5-0.1,7.3,1.1c36.5,19.1,73.7,20.7,111.7,4.8c1.1-0.4,2.3-0.7,3.2-1.5   c7.9-6.7,15-4,23.2,0.5c38.3,21.1,76.9,41.8,115.5,62.4c16.7,8.9,24.9,22.3,24.6,41.2c-0.2,10.7,0,21.3,0,32   c-0.1,17.7-11.9,29.4-29.5,29.4C382.3,474.1,319.6,474.1,257,474.1z"/><path d="M253.9,295.2c-35.2-1.2-64.4-18.6-85.9-49.5C132.8,195,137,123,177.3,76.8c43.8-50.1,116.4-49.8,159.8,0.6   c46.1,53.6,43.2,138.2-6.7,186.8C310,284.1,285.6,294.8,253.9,295.2z"/></g></svg>
+</div></pre></code>
+                   </div>
+                 </div>
+                 <h3 class="text-medium text-gray">Input with error</h3>
+                 <div class="example-code border rounded-corners mb-big">
+                   <div class="p-big border-bottom">
+                     <label class="label" for="test10">Input</label>
+                     <div class="input input-fullWidth has-error">
+                         <input id="test10" placeholder="Input" type="text" />
+                     </div>
+                     <p class="text-error text-small">Error message</p>
+                   </div>
+                   <div class="">
+                     <pre><code class="language-markup"><label class="label" for="test10">Input</label>
+<div class="input input-fullWidth">
+  <input id="test10" placeholder="Input" type="text" />
+</div>
+<p class="text-error text-small">Error message</p></pre></code>
+                   </div>
+                 </div>
+                 <h3 class="text-medium text-gray">Select</h3>
+                 <div class="example-code border rounded-corners mb-big">
+                   <div class="p-big border-bottom">
+                     <label class="label" for="country-code">Select</label>
+                     <div class="select select-fullWidth">
+                         <select name="country-code" id="country-code">
+                                 <option>Option 1</option>
+                                 <option>Option 2</option>
+                                 <option>Option 3</option>
+                                 <option>Option 4</option>
+                         </select>
+                     </div>
+                   </div>
+                   <div class="">
+                     <pre><code class="language-markup"><label class="label" for="country-code">Select</label>
+<div class="select select-fullWidth">
+<select>
+<option>Option 1</option>
+<option>Option 2</option>
+<option>Option 3</option>
+<option>Option 4</option>
+</select>
+</div></pre></code>
+                   </div>
+                 </div>
+                 <h3 class="text-medium text-gray">Select with error</h3>
+                 <div class="example-code border rounded-corners mb-big">
+                   <div class="p-big border-bottom">
+                     <label class="label" for="country-code">Select</label>
+                     <div class="select select-fullWidth has-error">
+                         <select name="country-code" id="country-code">
+                                 <option>Option 1</option>
+                                 <option>Option 2</option>
+                                 <option>Option 3</option>
+                                 <option>Option 4</option>
+                         </select>
+                     </div>
+                     <p class="text-error text-small">Error message</p>
+                   </div>
+                   <div class="">
+                     <pre><code class="language-markup"><label class="label" for="country-code">Select</label>
+<div class="select select-fullWidth has-error">
+  <select>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+    <option>Option 4</option>
+  </select>
+</div>
+<p class="text-error text-small">Error message</p></pre></code>
+                   </div>
+                 </div>
+                 <h3 class="text-medium text-gray">Textarea</h3>
+                 <div class="example-code border rounded-corners mb-big">
+                   <div class="p-big border-bottom">
+                     <label class="label" for="message">Textarea</label>
+                     <div class="textarea">
+                       <textarea id="message"></textarea>
+                     </div>
+                   </div>
+                   <div class="">
+                     <pre><code class="language-markup"><label class="label" for="message">Textarea</label>
+<div class="textarea">
+  <textarea id="message"></textarea>
+</div></pre></code>
+                   </div>
+                 </div>
+                 <h3 class="text-medium text-gray">Textarea with error</h3>
+                 <div class="example-code border rounded-corners mb-big">
+                   <div class="p-big border-bottom">
+                     <label class="label" for="message">Textarea</label>
+                     <div class="textarea has-error">
+                       <textarea id="message"></textarea>
+                     </div>
+                     <p class="text-error text-small">Error message</p>
+                   </div>
+                   <div class="">
+                     <pre><code class="language-markup"><label class="label" for="message">Textarea</label>
+<div class="textarea">
+  <textarea id="message"></textarea>
+</div>
+<p class="text-error text-small">Error message</p></pre></code>
+                   </div>
+                 </div>
+                 <h3 class="text-medium text-gray">Radio buttons</h3>
+                 <div class="example-code border rounded-corners mb-big">
+                   <div class="p-big border-bottom">
+                     <div class="radio">
+                        <input id="radio1" name="radio" type="radio" value=""/>
+                        <label for="radio1" >Radio button 1</label>
+                     </div>
+                     <div class="radio">
+                        <input id="radio2" name="radio" type="radio" value=""/>
+                        <label for="radio2" >Radio button 2</label>
+                     </div>
+                     <div class="radio">
+                        <input id="radio3" name="radio" type="radio" value=""/>
+                        <label for="radio3" >Radio button 3</label>
+                     </div>
+                   </div>
+                   <div class="">
+                     <pre><code class="language-markup"><div class="radio">
+  <input id="radio1" name="radio" type="radio" value=""/>
+    <label for="radio1" >Radio button 1</label>
+    </div>
+  <div class="radio">
+    <input id="radio2" name="radio" type="radio" value=""/>
+    <label for="radio2" >Radio button 2</label>
+  </div>
+  <div class="radio">
+    <input id="radio3" name="radio" type="radio" value=""/>
+    <label for="radio3" >Radio button 3</label>
+</div></pre></code>
+                   </div>
+                 </div>
+                 <h3 class="text-medium text-gray">Checkboxes</h3>
+                 <div class="example-code border rounded-corners mb-big">
+                   <div class="p-big border-bottom">
+                     <div class="checkbox">
+                        <input id="one" name="#" type="checkbox" value=""/>
+                        <label for="one">Checkbox 1</label>
+                     </div>
+                     <div class="checkbox">
+                        <input id="two" name="#" type="checkbox" value=""/>
+                        <label for="two">Checkbox 2</label>
+                     </div>
+                     <div class="checkbox">
+                        <input id="three" name="#" type="checkbox" value=""/>
+                        <label for="three">Checkbox 3</label>
+                     </div>
+                   </div>
+                   <div class="">
+                     <pre><code class="language-markup"><div class="checkbox">
+  <input id="one" name="#" type="checkbox" value=""/>
+  <label for="one">Checkbox 1</label>
+</div>
+<div class="checkbox">
+  <input id="two" name="#" type="checkbox" value=""/>
+  <label for="two">Checkbox 2</label>
+</div>
+<div class="checkbox">
+  <input id="three" name="#" type="checkbox" value=""/>
+  <label for="three">Checkbox 3</label>
+</div></pre></code>
+                   </div>
+                 </div>
+               </section>
+               <!-- Collapsed forms -->
+               <section class="section">
+                 <h2 class="text-big">Collapsed forms</h2>
+                 <div class="example-code border rounded-corners mb-big">
+                   <div class="p-big border-bottom">
+                     <div class="formCollapsed m-none">
+                         <div class="input formCollapsed-item formCollapsed-itemPrimary">
+                             <input id="test8" placeholder="Search" type="text" />
+                         </div>
+                         <button class="formCollapsed-item button button-primary">
+                           Search
+                         </button>
+                     </div>
+                   </div>
+                   <div class="">
+                     <pre><code class="language-markup m-none"><div class="formCollapsed">
+  <div class="input formCollapsed-item formCollapsed-itemPrimary">
+    <input id="test8" placeholder="Search" type="text" />
+  </div>
+  <button class="formCollapsed-item button button-primary">
+    Search
+  </button>
+</div></pre></code>
+                   </div>
+                 </div>
+                 <div class="example-code border rounded-corners mb-big">
+                   <div class="p-big border-bottom">
+                     <div class="formCollapsed m-none">
+                         <div class="input formCollapsed-item formCollapsed-itemPrimary">
+                             <input id="test7" placeholder="Search" type="text" />
+                         </div>
+                         <div class="select formCollapsed-item">
+                             <select name="country-code" id="country-code">
+                                 <option>One</option>
+                                 <option>Two</option>
+                                 <option>Three</option>
+                                 <option>Four</option>
+                             </select>
+                         </div>
+                         <button class="formCollapsed-item button button-primary">
+                             Search
+                         </button>
+                     </div>
+                   </div>
+                   <div class="">
+                     <pre><code class="language-markup"><div class="formCollapsed">
+  <div class="input formCollapsed-item formCollapsed-itemPrimary">
+    <input id="test7" placeholder="Search" type="text" />
+  </div>
+  <div class="select formCollapsed-item">
+    <select name="country-code" id="country-code">
+      <option>One</option>
+      <option>Two</option>
+      <option>Three</option>
+      <option>Four</option>
+    </select>
+  </div>
+  <button class="formCollapsed-item button button-primary">
+    Search
+  </button>
+</div></pre></code>
+                   </div>
+                 </div>
+                 <div class="example-code border rounded-corners mb-big">
+                   <div class="p-big border-bottom">
+                     <div class="formCollapsed m-none">
+                         <div class="select formCollapsed-item formCollapsed-itemPrimary">
+                             <select name="country-code" id="country-code">
+                                 <option>Vincent</option>
+                                 <option>Jules</option>
+                                 <option>Mia </option>
+                                 <option>Butch</option>
+                                 <option>Winston </option>
+                             </select>
+                         </div>
+                         <div class="select formCollapsed-item formCollapsed-itemPrimary">
+                             <select name="country-code" id="country-code">
+                                 <option>Mr. White</option>
+                                 <option>Mr. Orange</option>
+                                 <option>Mr. Pink</option>
+                                 <option>Mr. Blonde</option>
+                                 <option>Nice Guy</option>
+                                 <option>Mr. Brown</option>
+                                 <option>Marvin</option>
+                                 <option>Holdaway</option>
+                                 <option>Mr. Blue</option>
+                             </select>
+                         </div>
+                          <div class="select formCollapsed-item formCollapsed-itemPrimary">
+                             <select name="country-code" id="country-code">
+                                 <option>Shaw </option>
+                                 <option>Kelly</option>
+                                 <option>Doyle </option>
+                                 <option>Lt. William</option>
+                                 <option>Singleton</option>
+                                 <option>Billie</option>
+                             </select>
+                         </div>
+                     </div>
+                   </div>
+                   <div class="">
+                     <pre><code class="language-markup"><div class="formCollapsed">
+  <div class="select formCollapsed-item formCollapsed-itemPrimary">
+    <select name="country-code" id="country-code">
+      <option>Vincent</option>
+      <option>Jules</option>
+      <option>Mia </option>
+      <option>Butch</option>
+    </select>
+  </div>
+  <div class="select formCollapsed-item formCollapsed-itemPrimary">
+    <select name="country-code" id="country-code">
+      <option>Mr. White</option>
+      <option>Mr. Orange</option>
+      <option>Mr. Pink</option>
+      <option>Mr. Blonde</option>
+    </select>
+  </div>
+  <div class="select formCollapsed-item formCollapsed-itemPrimary">
+    <select name="country-code" id="country-code">
+      <option>Shaw </option>
+      <option>Kelly</option>
+      <option>Doyle </option>
+      <option>Lt. William</option>
+    </select>
+  </div>
+</div></pre></code>
+                   </div>
+                 </div>
+               </section>
+               <!-- Tables -->
+               <section class="section">
+                 <h2 class="text-big">Tables</h2>
+                 <h3 class="text-medium text-gray">Standard</h3>
+                 <div class="example-code border rounded-corners mb-big">
+                   <div class="p-big border-bottom">
+                     <table class="table">
+                         <thead>
+                             <tr class="text-small text-left">
+                                 <th>Header 1</th>
+                                 <th>Header 2</th>
+                                 <th>Header 3</th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                             <tr>
+                                 <td>Lemon</td>
+                                 <td>Orange</td>
+                                 <td>Kiwi</td>
+                             </tr>
+                             <tr>
+                                 <td>Sugar</td>
+                                 <td>Salt</td>
+                                 <td>Pepper</td>
+                             </tr>
+                             <tr>
+                                 <td>Fork</td>
+                                 <td>Knife</td>
+                                 <td>Spoon</td>
+                             </tr>
+                             <tr>
+                                 <td>Cup</td>
+                                 <td>Glass</td>
+                                 <td>Pitcher</td>
+                             </tr>
+                         </tbody>
+                     </table>
+                   </div>
+                   <div class="">
+                     <pre><code class="language-markup"><table class="table">
+  <thead>
+    <tr class="text-small text-left">
+      <th>Header 1</th>
+      <th>Header 2</th>
+      <th>Header 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Lemon</td>
+      <td>Orange</td>
+      <td>Kiwi</td>
+    </tr>
+    <tr>
+      <td>Sugar</td>
+      <td>Salt</td>
+      <td>Pepper</td>
+    </tr>
+    <tr>
+      <td>Fork</td>
+      <td>Knife</td>
+      <td>Spoon</td>
+    </tr>
+    <tr>
+      <td>Cup</td>
+      <td>Glass</td>
+      <td>Pitcher</td>
+    </tr>
+  </tbody>
+</table></pre></code>
+                   </div>
+                 </div>
+                 <h3 class="text-medium text-gray">Responsive</h3>
+                 <div class="example-code border rounded-corners mb-big">
+                   <div class="p-big border-bottom">
+                     <table class="table table--responsive">
+                         <tr class="text-small">
+                             <th>First column</th>
+                             <th>Second column</th>
+                             <th>Third column</th>
+                         </tr>
+                         <tr>
+                             <td data-th="First column">Blue</td>
+                             <td data-th="Second column">One</td>
+                             <td data-th="Third column">My life fades</td>
+                         </tr>
+                         <tr>
+                             <td data-th="First column">Green</td>
+                             <td data-th="Second column">Two</td>
+                             <td data-th="Third column">When the world was powered by the black fuel... and the desert sprouted great cities of pipe and steel. </td>
+                         </tr>
+                         <tr>
+                             <td data-th="First column">Yellow</td>
+                             <td data-th="Second column">Three</td>
+                             <td data-th="Third column">A whirlwind of looting, a firestorm of fear. Men began to feed on men. A whirlwind of looting, a firestorm of fear. Men began to feed on men. </td>
+                         </tr>
+                     </table>
+                   </div>
+                   <div class="">
+                     <pre><code class="language-markup"><table class="table table--responsive">
+  <thead>
+    <tr class="text-small">
+      <th>First column</th>
+      <th>Second column</th>
+      <th>Third column</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="First column">Blue</td>
+      <td data-th="Second column">One</td>
+      <td data-th="Third column">My life fades</td>
+    </tr>
+    <tr>
+      <td data-th="First column">Green</td>
+      <td data-th="Second column">Two</td>
+      <td data-th="Third column">When the world was powered by the black fuel... and the desert sprouted great cities of pipe and steel. </td>
+    </tr>
+    <tr>
+      <td data-th="First column">Yellow</td>
+      <td data-th="Second column">Three</td>
+      <td data-th="Third column">A whirlwind of looting, a firestorm of fear. Men began to feed on men. A whirlwind of looting, a firestorm of fear. Men began to feed on men. </td>
+    </tr>
+  </tbody>
+</table></pre></code>
+                   </div>
+                 </div>
+                 <a class="anchor" name="utilities"></a>
+               </section>
+                  <!-- Typography -->
+                  <h2 class="text-huge">Utilities</h3>
+                  <section class="">
+                      <h2 class="text-big">Typography</h2>
+                      <h2 class="text-medium text-gray">Sizes</h2>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom">
+                          <p class="text-huge">Lorem ipsum dolor sit amet</p>
+                          <p class="text-big">Lorem ipsum dolor sit amet</p>
+                          <p class="text-medium">Lorem ipsum dolor sit amet</p>
+                          <p class="text-small">Lorem ipsum dolor sit amet</p>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><p class="text-huge">Lorem ipsum dolor sit amet</p>
+<p class="text-big">Lorem ipsum dolor sit amet</p>
+<p class="text-medium">Lorem ipsum dolor sit amet</p>
+<p class="text-small">Lorem ipsum dolor sit amet</p></code></pre>
+                        </div>
+                      </div>
+                      <!-- Typography text w/ subtitle -->
+                      <h2 class="text-medium text-gray">Text with subtitle</h2>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom">
+                          <p class="text-big text-withSubtitle">Text medium</p>
+                          <p class="text-medium text-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><p class="text-big text-withSubtitle">Text medium</p>
+<p class="text-medium text-gray">Lorem ipsum dolor sit amet</p></code></pre>
+                        </div>
+                      </div>
+                      <!-- Typography text w/ subtitle -->
+                      <h2 class="text-medium text-gray">Default</h2>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom">
+                          <p class="m-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat repellendus nostrum molestiae, nisi <a href="#">commodi eveniet</a>! Veritatis omnis quas distinctio, possimus ratione. Facere iure ea laborum dicta, et aliquam, aspernatur modi.</p>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat repellendus nostrum molestiae, nisi <a href="#">commodi eveniet</a>! Veritatis omnis quas distinctio, possimus ratione. Facere iure ea laborum dicta, et aliquam, aspernatur modi.</p></code></pre>
+                        </div>
+                      </div>
+                      <!-- Typography text w/ subtitle -->
+                      <h2 class="text-medium text-gray">Colors</h2>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom">
+                          <p class="text-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae atque ut quis enim tenetur culpa voluptatem explicabo accusantium saepe rerum officiis temporibus.</p>
+                          <p class="text-primary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae atque ut quis enim tenetur culpa voluptatem explicabo accusantium saepe rerum officiis temporibus.</p>
+                          <p class="text-success">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae atque ut quis enim tenetur culpa voluptatem explicabo accusantium saepe rerum officiis temporibus.</p>
+                          <p class="text-error">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae atque ut quis enim tenetur culpa voluptatem explicabo accusantium saepe rerum officiis temporibus.</p>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><p class="text-gray">Lorem ipsum dolor sit amet...</p>
+<p class="text-primary">Lorem ipsum dolor sit amet...</p>
+<p class="text-success">Lorem ipsum dolor sit amet...</p>
+<p class="text-error">Lorem ipsum dolor sit amet...</p></code></pre>
+                        </div>
+                      </div>
+                      <h2 class="text-medium text-gray">Text aligners</h2>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom">
+                          <p class="text-center">Lorem ipsum dolor sit amet.</p>
+                          <p class="text-right">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><p class="text-center">Lorem ipsum dolor sit amet...</p>
+<p class="text-right">Lorem ipsum dolor sit amet...</p>
+</code></pre>
+                        </div>
+                      </div>
+                      <h2 class="text-medium text-gray">Modifiers</h2>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom">
+                          <p class="text-uppercase">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae atque ut quis enim tenetur culpa voluptatem explicabo accusantium saepe rerum officiis temporibus.</p>
+                          <p class="text-lineThrough">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae atque ut quis enim tenetur culpa voluptatem explicabo accusantium saepe rerum officiis temporibus.</p>
+                          <p class="text-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae atque ut quis enim tenetur culpa voluptatem explicabo accusantium saepe rerum officiis temporibus.</p>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><p class="text-uppercase">Lorem ipsum dolor sit amet...</p>
+<p class="text-lineThrough">Lorem ipsum dolor sit amet...</p>
+<p class="text-italic">Lorem ipsum dolor sit amet...</p></code></pre>
+                        </div>
+                      </div>
+                  </section>
+                  <!-- Opacity -->
+                  <section class="section">
+                    <h3 class="text-big">Low opacity</h3>
+                    <div class="example-code border rounded-corners mb-big">
+                      <div class="p-big border-bottom text-center">
+                        <img class="opacity-low" src="img/img1.jpg" alt="Image 1" width="150"/>
+                      </div>
+                      <div class="">
+                        <pre><code class="language-markup"><img class="opacity-low" src="#" width="#"/></code></pre>
+                      </div>
+                    </div>
+                  </section>
+                  <!-- Image modifiers -->
+                  <section class="section">
+                    <h3 class="text-big">Image modifiers</h3>
+                    <h3 class="text-medium text-gray">Circle</h3>
+                    <div class="example-code border rounded-corners mb-big">
+                      <div class="p-big border-bottom text-center">
+                        <img class="rounded" src="img/img1.jpg" alt="Image 1" width="100"/>
+                      </div>
+                      <div class="">
+                        <pre><code class="language-markup"><img class="rounded" src="img/img1.jpg" alt="#" width="100"/></code></pre>
+                      </div>
+                    </div>
+                    <h3 class="text-medium text-gray">Rouded corners</h3>
+                    <div class="example-code border rounded-corners mb-big">
+                      <div class="p-big border-bottom text-center">
+                        <img class="rounded-corners" src="img/img6.jpg" alt="Image 1" width="100"/>
+                      </div>
+                      <div class="">
+                        <pre><code class="language-markup"><img class="rounded-corners" src="img/img6.jpg" alt="#" width="100"/></code></pre>
+                      </div>
+                    </div>
+                  </section>
+                  <!-- Aligners -->
+                    <section class="section">
+                      <h2 class="text-big">Aligners</h2>
+                      <h3 class="text-medium text-gray">Space between</h3>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom">
+                          <div class="aligner aligner--spaceBetween">
+                              <div><img src="img/img4.jpg" alt="Image 4" width="50"/></div>
+                              <div><img src="img/img2.jpg" alt="Image 2" width="50"/></div>
+                          </div>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><div class="aligner aligner--spaceBetween">
+  <div><img src="img/img4.jpg" width="50"/></div>
+  <div><img src="img/img2.jpg" width="50"/></div>
+</div></pre></code>
+                        </div>
+                      </div>
+                      <h3 class="text-medium text-gray">Space around</h3>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom">
+                          <div class="aligner aligner--spaceAround">
+                              <div><img src="img/img2.jpg" alt="Image 4" width="50"/></div>
+                              <div><img src="img/img3.jpg" alt="Image 3" width="50"/></div>
+                          </div>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><div class="aligner aligner--spaceBetween">
+  <div><img src="img/img2.jpg" width="50"/></div>
+  <div><img src="img/img1.jpg" width="50"/></div>
+</div></pre></code>
+                        </div>
+                      </div>
+                      <h3 class="text-medium text-gray">Content start</h3>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom">
+                          <div class="aligner aligner--contentStart">
+                              <div><img src="img/img6.jpg" alt="Image 4" width="50"/></div>
+                          </div>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><div class="aligner aligner--contentStart">
+<div><img src="img/img6.jpg" width="50"/></div>
+</div></pre></code>
+                        </div>
+                      </div>
+                      <h3 class="text-medium text-gray">Content end</h3>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom">
+                          <div class="aligner aligner--contentEnd">
+                              <div><img src="img/img2.jpg" alt="Image 2" width="50"/></div>
+                          </div>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><div class="aligner aligner--contentEnd">
+  <div><img src="img/img2.jpg" width="50"/></div>
+</div></pre></code>
+                        </div>
+                      </div>
+                      <h3 class="text-medium text-gray">Center vertical</h3>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom">
+                          <div class="aligner aligner--centerVertical" style="height: 100px;">
+                              <div><img src="img/img3.jpg" alt="Image 4" width="50"/></div>
+                          </div>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><div class="aligner aligner--centerVertical">
+  <div><img src="img/img3.jpg" width="50"/></div>
+</div></pre></code>
+                        </div>
+                      </div>
+                      <h3 class="text-medium text-gray">Center vertical and horizontal</h3>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom">
+                          <div class="aligner aligner--centerHoritzontal aligner--centerVertical" style="height: 100px;">
+                              <div><img src="img/img1.jpg" alt="Image 4" width="50"/></div>
+                          </div>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><div class="aligner aligner--centerHoritzontal aligner--centerVertical">
+  <div><img src="img/img1.jpg" width="50"/></div>
+</div></pre></code>
+                        </div>
+                      </div>
+                      <h3 class="text-medium text-gray">Align to bottom</h3>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom">
+                          <div class="aligner" style="height: 100px;">
+                              <div class="aligner--itemBottom"><img src="img/img4.jpg" alt="Image 4" width="50"/></div>
+                          </div>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><div class="aligner">
+  <div class="aligner--itemBottom">
+    <img src="img/img4.jpg" alt="Image 4" width="50"/>
+  </div>
+</div>
+</pre></code>
+                        </div>
+                      </div>
+                    </section>
+                    <!-- Colors -->
+                    <section class="section">
+                      <h2 class="text-big">Colors</h2>
+                      <h3 class="text-medium text-gray">Primary / secondary</h3>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom">
+                          <div class="aligner aligner--spaceAround">
+                              <div class="flex-grow bg-primary"><br><br></div>
+                              <div class="flex-grow bg-secondary"><br><br></div>
+                          </div>
+
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><div class="aligner aligner--spaceAround">
+  <div class="flex-grow bg-primary"><br><br></div>
+  <div class="flex-grow bg-secondary"><br><br></div>
+</div></pre></code>
+                        </div>
+                      </div>
+                      <h3 class="text-medium text-gray">Success / info / error / warning</h3>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom">
+                          <div class="aligner aligner--spaceAround">
+                              <div class="flex-grow bg-success"><br><br></div>
+                              <div class="flex-grow bg-info"><br><br></div>
+                              <div class="flex-grow bg-warning"><br><br></div>
+                              <div class="flex-grow bg-error"><br><br></div>
+                          </div>
+
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><div class="aligner aligner--spaceAround">
+  <div class="flex-grow bg-success"><br><br></div>
+  <div class="flex-grow bg-info"><br><br></div>
+  <div class="flex-grow bg-warning"><br><br></div>
+  <div class="flex-grow bg-error"><br><br></div>
+</div></pre></code>
+                        </div>
+                      </div>
+                      <h3 class="text-medium text-gray">Others</h3>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom">
+                          <div class="aligner aligner--spaceAround">
+                            <div class="flex-grow bg-white"><br><br></div>
+                            <div class="flex-grow bg-gray-light"><br><br></div>
+                            <div class="flex-grow bg-gray"><br><br></div>
+                            <div class="flex-grow bg-dark"><br><br></div>
+                          </div>
+
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><div class="aligner aligner--spaceAround">
+  <div class="flex-grow bg-white"><br><br></div>
+  <div class="flex-grow bg-gray-light"><br><br></div>
+  <div class="flex-grow bg-gray"><br><br></div>
+  <div class="flex-grow bg-dark"><br><br></div>
+</div></pre></code>
+                        </div>
+                      </div>
+                    </section>
+                    <!-- Full width box -->
+                    <section class="section">
+                      <h2 class="text-big">Full width box</h2>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom">
+                          <div class="section bg-dark">
+                              <div class="container text-center">
+                                  <h3 class="text-huge text-white text-withSubtitle">We can be heroes</h3>
+                                  <h4 class="text-big text-gray m-none">just for one day</h4>
+                              </div>
+                          </div>
+
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><div class="section bg-dark">
+  <div class="container text-center">
+    <h3 class="text-huge text-white text-withSubtitle">We can be heroes</h3>
+    <h4 class="text-big text-gray m-none">just for one day</h4>
+  </div>
+</div></pre></code>
+                        </div>
+                      </div>
+                    </section>
+                    <!-- Borders -->
+                    <section class="section">
+                      <h2 class="text-big">Borders</h2>
+                      <h3 class="text-medium text-gray">Top bottom</h3>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-huge border-bottom">
+                          <div class="border-top border-bottom"><br></div>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><div class="border-top border-bottom"><br></div></pre></code>
+                        </div>
+                      </div>
+                      <h3 class="text-medium text-gray">Left right</h3>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-huge border-bottom">
+                          <div class="border-left border-right"><br></div>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><div class="border-left border-right"><br></div></pre></code>
+                        </div>
+                      </div>
+                      <h3 class="text-medium text-gray">Bordered</h3>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-huge border-bottom">
+                          <div class="border"><br></div>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><div class="border"><br></div></pre></code>
+                        </div>
+                      </div>
+                    </section>
+                    <!-- Containers -->
+                    <section class="section">
+                      <h2 class="text-big">Containers</h2>
+                      <h3 class="text-medium text-gray">Standard</h3>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="">
+                          <pre><code class="language-markup"><div class="container"></div></pre></code>
+                        </div>
+                      </div>
+                      <h3 class="text-medium text-gray">Medium</h3>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="">
+                          <pre><code class="language-markup"><div class="container-medium"></div></pre></code>
+                        </div>
+                      </div>
+                      <h3 class="text-medium text-gray">Small</h3>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="">
+                          <pre><code class="language-markup"><div class="container-small"></div></pre></code>
+                        </div>
+                      </div>
+                    </section>
+
+                    <!-- <section class="section">
+                      <h2 class="text-big">Empty</h2>
+                      <h3 class="text-medium text-gray">Colors</h3>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom">
+
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"></pre></code>
+                        </div>
+                      </div>
+                    </section> -->
+            </div>
+          </div>
+        </main>
+        <footer class="bg-dark">
+           <div class="container">
+                <div class="section text-center text-small">
+                    <p class="text-white">
+                        <img src="img/logo.png" alt="sierra logo" width="100"/><br>
+                        Built with &nbsp; ❤ &nbsp; and Sierra SCSS library <br><span class="text-small text-gray">v3.0.4</span>
+                    </p>
+
+                    <p class="text-gray"><a href="https://github.com/sierra-library/sierra">Sierra Github</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="https://joanclaret.github.io" title="Joan Claret">joanclaret.github.io</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="https://github.com/joanclaret" title="Joan Claret">github.com/joanclaret</a></p>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+      <script src="js/jquery.waypoints.min.js"></script>
+    	<script src="js/demo.js"></script>
+    	<script src="js/prism.js"></script>
+
+</html>

@@ -1950,7 +1950,8 @@ body {
   visibility: hidden; }
 
 .main-logo {
-  width: 150px; }
+  width: 150px;
+  fill: #03a9f4; }
   @media (max-width: 767px) {
     .main-logo {
       width: 100px; } }
