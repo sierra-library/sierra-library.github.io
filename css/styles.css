@@ -2007,31 +2007,69 @@ pre {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   display: none;
   left: 0;
-  padding: 16px 0;
   position: fixed;
   right: 0;
   top: -100%;
-  z-index: 2000;
-  transition: top 1s; }
-  .header.is-visible {
+  z-index: 2000; }
+  @media (min-width: 576px) {
+    .header {
+      padding: 16px 0; } }
+  .header::after {
+    background: linear-gradient(to left, white 0%, rgba(255, 255, 255, 0) 100%);
+    bottom: 0;
+    content: '';
+    position: absolute;
+    right: 0;
     top: 0;
-    display: block; }
+    width: 12px; }
+  .header.is-visible {
+    display: block;
+    top: 0; }
   .header-inner {
     align-items: center;
     display: flex;
     justify-content: space-between; }
   .header-logo {
     align-items: center;
-    display: flex; }
+    display: flex;
+    flex-shrink: 0;
+    position: relative; }
+    .header-logo::after {
+      background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+      bottom: 0;
+      content: '';
+      position: absolute;
+      right: -15px;
+      top: 0;
+      width: 15px; }
     .header-logoImage {
       margin-right: 8px; }
-  @media (max-width: 991px) {
-    .header-ghLogo {
-      display: none; } }
+      @media (min-width: 576px) {
+        .header-logoImage {
+          margin-right: 16px; } }
+  .header-github {
+    flex-shrink: 0; }
+    .header-githubImage {
+      margin-right: 12px; }
+      @media (min-width: 576px) {
+        .header-githubImage {
+          margin-right: 0; } }
   .header-nav {
     align-items: center;
     display: flex;
-    margin: 0; }
+    margin: 0;
+    margin-right: -12px;
+    overflow-x: scroll;
+    padding: 20px 16px;
+    white-space: nowrap; }
+    @media (min-width: 576px) {
+      .header-nav {
+        margin-right: 0;
+        padding: 0; } }
     .header-navItem {
       margin: 0;
-      margin-left: 16px; }
+      margin-right: 16px; }
+
+@media (max-width: 767px) {
+  .hide-small {
+    display: none; } }
