@@ -160,7 +160,7 @@ $z-header: 2000 !default;
 
     &Image {
       @include media-breakpoint-up(sm) {
-        margin-right: $m-medium;
+        margin-right: $m-small;
       }
       margin-right: $m-small;
     }

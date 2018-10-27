@@ -2050,7 +2050,7 @@ pre {
       margin-right: 8px; }
       @media (min-width: 576px) {
         .header-logoImage {
-          margin-right: 16px; } }
+          margin-right: 8px; } }
   .header-github {
     flex-shrink: 0; }
     .header-githubImage {
