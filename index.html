@@ -424,7 +424,7 @@
                    <div class="">
                      <pre><code class="language-markup"><label class="label" for="test10">Input</label>
 <div class="input input-fullWidth">
-<input id="test10" placeholder="Input" type="text" />
+  <input id="test10" placeholder="Input" type="text" />
 </div></pre></code>
                    </div>
                  </div>
@@ -448,16 +448,18 @@
                  <h3 class="text-medium text-gray">Input with error</h3>
                  <div class="example-code border rounded-corners mb-big">
                    <div class="p-big border-bottom">
-                     <label class="label text-error" for="test10">Input</label>
+                     <label class="label" for="test10">Input</label>
                      <div class="input input-fullWidth has-error">
                          <input id="test10" placeholder="Input" type="text" />
                      </div>
+                     <p class="text-error text-small">Error message</p>
                    </div>
                    <div class="">
                      <pre><code class="language-markup"><label class="label" for="test10">Input</label>
 <div class="input input-fullWidth">
-<input id="test10" placeholder="Input" type="text" />
-</div></pre></code>
+  <input id="test10" placeholder="Input" type="text" />
+</div>
+<p class="text-error text-small">Error message</p></pre></code>
                    </div>
                  </div>
                  <h3 class="text-medium text-gray">Select</h3>
@@ -488,7 +490,7 @@
                  <h3 class="text-medium text-gray">Select with error</h3>
                  <div class="example-code border rounded-corners mb-big">
                    <div class="p-big border-bottom">
-                     <label class="label text-error" for="country-code">Select</label>
+                     <label class="label" for="country-code">Select</label>
                      <div class="select select-fullWidth has-error">
                          <select name="country-code" id="country-code">
                                  <option>Option 1</option>
@@ -497,17 +499,19 @@
                                  <option>Option 4</option>
                          </select>
                      </div>
+                     <p class="text-error text-small">Error message</p>
                    </div>
                    <div class="">
-                     <pre><code class="language-markup"><label class="label text-error" for="country-code">Select</label>
+                     <pre><code class="language-markup"><label class="label" for="country-code">Select</label>
 <div class="select select-fullWidth has-error">
-<select>
-<option>Option 1</option>
-<option>Option 2</option>
-<option>Option 3</option>
-<option>Option 4</option>
-</select>
-</div></pre></code>
+  <select>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+    <option>Option 4</option>
+  </select>
+</div>
+<p class="text-error text-small">Error message</p></pre></code>
                    </div>
                  </div>
                  <h3 class="text-medium text-gray">Textarea</h3>
@@ -521,23 +525,25 @@
                    <div class="">
                      <pre><code class="language-markup"><label class="label" for="message">Textarea</label>
 <div class="textarea">
-<textarea id="message"></textarea>
+  <textarea id="message"></textarea>
 </div></pre></code>
                    </div>
                  </div>
                  <h3 class="text-medium text-gray">Textarea with error</h3>
                  <div class="example-code border rounded-corners mb-big">
                    <div class="p-big border-bottom">
-                     <label class="label text-error" for="message">Textarea</label>
+                     <label class="label" for="message">Textarea</label>
                      <div class="textarea has-error">
                        <textarea id="message"></textarea>
                      </div>
+                     <p class="text-error text-small">Error message</p>
                    </div>
                    <div class="">
                      <pre><code class="language-markup"><label class="label" for="message">Textarea</label>
 <div class="textarea">
-<textarea id="message"></textarea>
-</div></pre></code>
+  <textarea id="message"></textarea>
+</div>
+<p class="text-error text-small">Error message</p></pre></code>
                    </div>
                  </div>
                  <h3 class="text-medium text-gray">Radio buttons</h3>
@@ -558,16 +564,16 @@
                    </div>
                    <div class="">
                      <pre><code class="language-markup"><div class="radio">
-<input id="radio1" name="radio" type="radio" value=""/>
-<label for="radio1" >Radio button 1</label>
-</div>
-<div class="radio">
-<input id="radio2" name="radio" type="radio" value=""/>
-<label for="radio2" >Radio button 2</label>
-</div>
-<div class="radio">
-<input id="radio3" name="radio" type="radio" value=""/>
-<label for="radio3" >Radio button 3</label>
+  <input id="radio1" name="radio" type="radio" value=""/>
+    <label for="radio1" >Radio button 1</label>
+    </div>
+  <div class="radio">
+    <input id="radio2" name="radio" type="radio" value=""/>
+    <label for="radio2" >Radio button 2</label>
+  </div>
+  <div class="radio">
+    <input id="radio3" name="radio" type="radio" value=""/>
+    <label for="radio3" >Radio button 3</label>
 </div></pre></code>
                    </div>
                  </div>
@@ -589,16 +595,16 @@
                    </div>
                    <div class="">
                      <pre><code class="language-markup"><div class="checkbox">
-<input id="one" name="#" type="checkbox" value=""/>
-<label for="one">Checkbox 1</label>
+  <input id="one" name="#" type="checkbox" value=""/>
+  <label for="one">Checkbox 1</label>
 </div>
 <div class="checkbox">
-<input id="two" name="#" type="checkbox" value=""/>
-<label for="two">Checkbox 2</label>
+  <input id="two" name="#" type="checkbox" value=""/>
+  <label for="two">Checkbox 2</label>
 </div>
 <div class="checkbox">
-<input id="three" name="#" type="checkbox" value=""/>
-<label for="three">Checkbox 3</label>
+  <input id="three" name="#" type="checkbox" value=""/>
+  <label for="three">Checkbox 3</label>
 </div></pre></code>
                    </div>
                  </div>
@@ -619,12 +625,12 @@
                    </div>
                    <div class="">
                      <pre><code class="language-markup m-none"><div class="formCollapsed">
-<div class="input formCollapsed-item formCollapsed-itemPrimary">
-<input id="test8" placeholder="Search" type="text" />
-</div>
-<button class="formCollapsed-item button button-primary">
-Search
-</button>
+  <div class="input formCollapsed-item formCollapsed-itemPrimary">
+    <input id="test8" placeholder="Search" type="text" />
+  </div>
+  <button class="formCollapsed-item button button-primary">
+    Search
+  </button>
 </div></pre></code>
                    </div>
                  </div>
@@ -649,20 +655,20 @@ Search
                    </div>
                    <div class="">
                      <pre><code class="language-markup"><div class="formCollapsed">
-<div class="input formCollapsed-item formCollapsed-itemPrimary">
-<input id="test7" placeholder="Search" type="text" />
-</div>
-<div class="select formCollapsed-item">
-<select name="country-code" id="country-code">
-   <option>One</option>
-   <option>Two</option>
-   <option>Three</option>
-   <option>Four</option>
-</select>
-</div>
-<button class="formCollapsed-item button button-primary">
- Search
-</button>
+  <div class="input formCollapsed-item formCollapsed-itemPrimary">
+    <input id="test7" placeholder="Search" type="text" />
+  </div>
+  <div class="select formCollapsed-item">
+    <select name="country-code" id="country-code">
+      <option>One</option>
+      <option>Two</option>
+      <option>Three</option>
+      <option>Four</option>
+    </select>
+  </div>
+  <button class="formCollapsed-item button button-primary">
+    Search
+  </button>
 </div></pre></code>
                    </div>
                  </div>
@@ -705,30 +711,30 @@ Search
                    </div>
                    <div class="">
                      <pre><code class="language-markup"><div class="formCollapsed">
-<div class="select formCollapsed-item formCollapsed-itemPrimary">
-<select name="country-code" id="country-code">
- <option>Vincent</option>
- <option>Jules</option>
- <option>Mia </option>
- <option>Butch</option>
-</select>
-</div>
-<div class="select formCollapsed-item formCollapsed-itemPrimary">
-<select name="country-code" id="country-code">
- <option>Mr. White</option>
- <option>Mr. Orange</option>
- <option>Mr. Pink</option>
- <option>Mr. Blonde</option>
-</select>
-</div>
-<div class="select formCollapsed-item formCollapsed-itemPrimary">
-<select name="country-code" id="country-code">
- <option>Shaw </option>
- <option>Kelly</option>
- <option>Doyle </option>
- <option>Lt. William</option>
-</select>
-</div>
+  <div class="select formCollapsed-item formCollapsed-itemPrimary">
+    <select name="country-code" id="country-code">
+      <option>Vincent</option>
+      <option>Jules</option>
+      <option>Mia </option>
+      <option>Butch</option>
+    </select>
+  </div>
+  <div class="select formCollapsed-item formCollapsed-itemPrimary">
+    <select name="country-code" id="country-code">
+      <option>Mr. White</option>
+      <option>Mr. Orange</option>
+      <option>Mr. Pink</option>
+      <option>Mr. Blonde</option>
+    </select>
+  </div>
+  <div class="select formCollapsed-item formCollapsed-itemPrimary">
+    <select name="country-code" id="country-code">
+      <option>Shaw </option>
+      <option>Kelly</option>
+      <option>Doyle </option>
+      <option>Lt. William</option>
+    </select>
+  </div>
 </div></pre></code>
                    </div>
                  </div>
@@ -773,35 +779,35 @@ Search
                    </div>
                    <div class="">
                      <pre><code class="language-markup"><table class="table">
-<thead>
-<tr class="text-small text-left">
- <th>Header 1</th>
- <th>Header 2</th>
- <th>Header 3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
- <td>Lemon</td>
- <td>Orange</td>
- <td>Kiwi</td>
-</tr>
-<tr>
- <td>Sugar</td>
- <td>Salt</td>
- <td>Pepper</td>
-</tr>
-<tr>
- <td>Fork</td>
- <td>Knife</td>
- <td>Spoon</td>
-</tr>
-<tr>
- <td>Cup</td>
- <td>Glass</td>
- <td>Pitcher</td>
-</tr>
-</tbody>
+  <thead>
+    <tr class="text-small text-left">
+      <th>Header 1</th>
+      <th>Header 2</th>
+      <th>Header 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Lemon</td>
+      <td>Orange</td>
+      <td>Kiwi</td>
+    </tr>
+    <tr>
+      <td>Sugar</td>
+      <td>Salt</td>
+      <td>Pepper</td>
+    </tr>
+    <tr>
+      <td>Fork</td>
+      <td>Knife</td>
+      <td>Spoon</td>
+    </tr>
+    <tr>
+      <td>Cup</td>
+      <td>Glass</td>
+      <td>Pitcher</td>
+    </tr>
+  </tbody>
 </table></pre></code>
                    </div>
                  </div>
@@ -833,30 +839,30 @@ Search
                    </div>
                    <div class="">
                      <pre><code class="language-markup"><table class="table table--responsive">
-<thead>
-<tr class="text-small">
- <th>First column</th>
- <th>Second column</th>
- <th>Third column</th>
-</tr>
-</thead>
-<tbody>
-<tr>
- <td data-th="First column">Blue</td>
- <td data-th="Second column">One</td>
- <td data-th="Third column">My life fades</td>
-</tr>
-<tr>
- <td data-th="First column">Green</td>
- <td data-th="Second column">Two</td>
- <td data-th="Third column">When the world was powered by the black fuel... and the desert sprouted great cities of pipe and steel. </td>
-</tr>
-<tr>
- <td data-th="First column">Yellow</td>
- <td data-th="Second column">Three</td>
- <td data-th="Third column">A whirlwind of looting, a firestorm of fear. Men began to feed on men. A whirlwind of looting, a firestorm of fear. Men began to feed on men. </td>
-</tr>
-</tbody>
+  <thead>
+    <tr class="text-small">
+      <th>First column</th>
+      <th>Second column</th>
+      <th>Third column</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="First column">Blue</td>
+      <td data-th="Second column">One</td>
+      <td data-th="Third column">My life fades</td>
+    </tr>
+    <tr>
+      <td data-th="First column">Green</td>
+      <td data-th="Second column">Two</td>
+      <td data-th="Third column">When the world was powered by the black fuel... and the desert sprouted great cities of pipe and steel. </td>
+    </tr>
+    <tr>
+      <td data-th="First column">Yellow</td>
+      <td data-th="Second column">Three</td>
+      <td data-th="Third column">A whirlwind of looting, a firestorm of fear. Men began to feed on men. A whirlwind of looting, a firestorm of fear. Men began to feed on men. </td>
+    </tr>
+  </tbody>
 </table></pre></code>
                    </div>
                  </div>
