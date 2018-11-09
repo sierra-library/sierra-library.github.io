@@ -1982,6 +1982,9 @@ body {
   .example2 img {
     width: 100% !important; } }
 
+.language-js {
+  font-size: 14px; }
+
 :not(pre) > code[class*="language-"], pre[class*="language-"] {
   background-color: #eceff1 !important; }
 
