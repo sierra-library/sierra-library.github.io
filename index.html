@@ -1124,6 +1124,124 @@
                         </div>
                       </div>
                     </section>
+                    <!-- Grid -->
+                    <section class="section">
+                      <h3 class="text-big">Grid</h3>
+                      <h3 class="text-medium text-gray">Equal width columns</h3>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom text-center">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col bg-gray-light"><br><br></div>
+                              <div class="col bg-gray"><br><br></div>
+                              <div class="col bg-gray-light"><br><br></div>
+                              <div class="col bg-gray"><br><br></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><div class="container">
+  <div class="row">
+    <div class="col bg-gray-light"><br><br></div>
+    <div class="col bg-gray"><br><br></div>
+    <div class="col bg-gray-light"><br><br></div>
+    <div class="col bg-gray"><br><br></div>
+  </div>
+</div></code></pre>
+                        </div>
+                      </div>
+                      <h3 class="text-medium text-gray">Equal width, responsive columns</h3>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom text-center">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-sm bg-gray-light p-medium text-gray">3/12</div>
+                              <div class="col-sm bg-gray p-medium text-white">3/12</div>
+                              <div class="col-sm bg-gray-light p-medium text-gray">3/12</div>
+                              <div class="col-sm bg-gray p-medium text-white">3/12</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><div class="container">
+  <div class="row">
+    <div class="col-sm bg-gray-light p-medium text-gray">3/12</div>
+    <div class="col-sm bg-gray p-medium text-white">3/12</div>
+    <div class="col-sm bg-gray-light p-medium text-gray">3/12</div>
+    <div class="col-sm bg-gray p-medium text-white">3/12</div>
+  </div>
+</div>
+
+Available responsive classes:
+
+col-sm <!-- Equal width on small, medium, large and extra large devices -->
+col-md <!-- Equal width on medium, large, and extra large devices -->
+col-lg <!-- Equal width on large, and extra large devices -->
+col-xl <!-- Equal width on extra large devices -->
+</code></pre>
+                        </div>
+                      </div>
+                      <h3 class="text-medium text-gray">Variable width</h3>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom text-center">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-sm-4 bg-gray-light p-medium text-gray">4/12</div>
+                              <div class="col-sm-2 bg-gray p-medium text-white">2/12</div>
+                              <div class="col-sm-4 bg-gray-light p-medium text-gray">4/12</div>
+                              <div class="col-sm-2 bg-gray p-medium text-white">2/12</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><div class="container">
+  <div class="row">
+    <div class="col-sm-4 bg-gray-light p-medium text-gray">4/12</div>
+    <div class="col-sm-2 bg-gray p-medium text-white">2/12</div>
+    <div class="col-sm-4 bg-gray-light p-medium text-gray">4/12</div>
+    <div class="col-sm-2 bg-gray p-medium text-white">2/12</div>
+  </div>
+</div></code></pre>
+                        </div>
+                      </div>
+                      <h3 class="text-medium text-gray">Nesting</h3>
+                      <div class="example-code border rounded-corners mb-big">
+                        <div class="p-big border-bottom text-center">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col bg-gray-light p-medium text-gray">
+                                <p class="mb-small">Col</p>
+                                <div class="container">
+                                  <div class="row">
+                                    <div class="col bg-gray p-medium text-white">Nested col</div>
+                                    <div class="col bg-white p-medium ">Nested col</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col bg-gray p-medium text-white"><p class="mb-small">Col</p></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="">
+                          <pre><code class="language-markup"><div class="container">
+  <div class="row"> <!-- First level row -->
+    <div class="col bg-gray-light p-medium text-gray">
+      <p class="mb-small">Col</p>
+      <div class="container">
+        <div class="row"> <!-- Nested row -->
+          <div class="col bg-gray p-medium text-white">Nested col</div>
+          <div class="col bg-white p-medium ">Nested col</div>
+        </div>
+      </div>
+    </div>
+    <div class="col bg-gray p-medium text-white">
+      <p class="mb-small">Col</p>
+    </div>
+  </div>
+</div></code></pre>
+                        </div>
+                      </div>
+                    </section>
                     <!-- Image modifiers -->
                     <section class="section">
                       <h3 class="text-big">Image modifiers</h3>
