@@ -114,11 +114,11 @@ $z-header: 2000 !default;
 
   background-color: $bgc-header;
   box-shadow: $bxsh-header;
-  display: none;
   left: 0;
   position: fixed;
   right: 0;
-  top: -100%;
+  top: -150%;
+  transition: top .5s ease-in-out;
   z-index: $z-header;
 
   &::after {
@@ -132,7 +132,6 @@ $z-header: 2000 !default;
   }
 
   &.is-visible {
-    display: block;
     top: 0;
   }
 

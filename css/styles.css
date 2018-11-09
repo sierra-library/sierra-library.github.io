@@ -2012,11 +2012,11 @@ pre {
 .header {
   background-color: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  display: none;
   left: 0;
   position: fixed;
   right: 0;
-  top: -100%;
+  top: -150%;
+  transition: top .5s ease-in-out;
   z-index: 2000; }
   @media (min-width: 576px) {
     .header {
@@ -2030,7 +2030,6 @@ pre {
     top: 0;
     width: 12px; }
   .header.is-visible {
-    display: block;
     top: 0; }
   .header-inner {
     align-items: center;
