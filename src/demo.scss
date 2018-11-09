@@ -193,6 +193,10 @@ $z-header: 2000 !default;
     &Item {
       margin: 0;
       margin-right: $m-medium;
+
+      &:last-child{
+        margin-right: 0;
+      }
     }
   }
 }

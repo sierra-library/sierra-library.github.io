@@ -2076,6 +2076,8 @@ pre {
     .header-navItem {
       margin: 0;
       margin-right: 16px; }
+      .header-navItem:last-child {
+        margin-right: 0; }
 
 @media (max-width: 767px) {
   .hide-small {
