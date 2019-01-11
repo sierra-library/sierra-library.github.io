@@ -138,7 +138,8 @@ li {
 .aligner--itemBottom {
   align-self: flex-end; }
 
-.flex-grow {
+.flex-grow,
+.aligner--grow {
   flex-grow: 1; }
 
 /**
@@ -2068,7 +2069,7 @@ pre {
     display: flex;
     margin: 0;
     margin-right: -12px;
-    overflow-x: scroll;
+    overflow-x: auto;
     padding: 20px 16px 20px 8px;
     white-space: nowrap; }
     @media (min-width: 576px) {

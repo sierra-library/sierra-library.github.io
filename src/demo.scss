@@ -185,7 +185,7 @@ $z-header: 2000 !default;
     display: flex;
     margin: 0;
     margin-right: -12px;
-    overflow-x: scroll;
+    overflow-x: auto;
     padding: 20px $p-big 20px $p-medium;
     white-space: nowrap;
 
