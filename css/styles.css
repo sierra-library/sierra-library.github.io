@@ -584,7 +584,7 @@ input:-webkit-autofill {
   border: 1px solid #d5d9db;
   border-radius: 3px;
   box-shadow: none;
-  display: block;
+  display: inline-block;
   font-weight: normal;
   margin-bottom: 20px;
   overflow: hidden; }
@@ -654,8 +654,12 @@ input:-webkit-autofill {
 
 .textarea {
   background-color: #eceff1;
-  padding: 0;
-  width: 100%; }
+  padding: 0; }
+  .textarea-fullWidth {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%; }
   .textarea textarea {
     background: transparent;
     border: 0;
@@ -788,7 +792,6 @@ input:-webkit-autofill {
 
 .input {
   background-color: #eceff1;
-  display: block;
   margin-right: 10px;
   padding: 0;
   position: relative; }
